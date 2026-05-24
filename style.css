@@ -721,6 +721,7 @@ body {
         font-size: 12px;
         background-color: transparent;
     }
+    .btn-primary { width: auto; grid-column: auto; }
 }
 
 /* ==========================================================================
