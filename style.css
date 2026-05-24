@@ -616,12 +616,15 @@ body {
 }
 
 .app-footer {
+    width: 100%;
     text-align: center;
-    padding: 25px 15px;
-    margin-top: 40px;
+    padding: 30px 15px;
+    margin-top: 50px;
     border-top: 1px solid var(--border-color);
     font-size: 13px;
-    color: var(--brand-light); /* Colore leggermente più tenue per non distrarre */
+    color: var(--brand-light);
+    clear: both; /* Forza il footer a posizionarsi sempre SOTTO a qualsiasi elemento fluttuante */
+    box-sizing: border-box;
 }
 
 /* ==========================================================================
@@ -712,7 +715,11 @@ body {
     }
 
     .app-footer {
-        margin-bottom: 20px;
+        margin-top: 30px;
+        /* Aggiunge spazio extra in basso per evitare che la barra di navigazione del telefono copra il testo */
+        padding-bottom: 40px; 
+        font-size: 12px;
+        background-color: transparent;
     }
 }
 
@@ -722,48 +729,54 @@ body {
 .print-only { display: none !important; }
 
 @media print {
-    .no-print { display: none !important; }
-    .print-only { display: inline-block !important; }
-    
-    /* Forza i colori di base del documento in modalità chiara */
-    :root, body {
+    /* 1. BLOCCO DI FORZATURA TEMA CHIARO PER SMARTPHONE */
+    :root, html, body {
+        color-scheme: light !important; /* Dice a iOS/Android di passare in modalità chiara */
         background-color: #ffffff !important;
-        color: #1a1a1a !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        -webkit-print-color-adjust: economy !important; /* Permette il reset in bianco/nero */
+        print-color-adjust: economy !important;
+    }
+    
+    /* Ridefinizione rigida delle variabili per la stampa */
+    :root {
         --brand-dark: #1e3a2f !important;
         --text-dark: #1a1a1a !important;
         --bg-light: #ffffff !important;
         --border-color: #cccccc !important;
     }
 
-    /* Rende invisibili gli elementi di navigazione che non servono nel PDF */
+    .no-print { display: none !important; }
+    .print-only { display: inline-block !important; }
+
+    /* 2. NASCONDERE GLI ELEMENTI (Incluso il footer con la sua classe corretta) */
     .sidebar-filters, 
     .nav-buttons, 
     .back-to-top, 
     #btn-fav-detail,
-    footer {
+    .app-footer { /* Corretto da 'footer' a '.app-footer' */
         display: none !important;
-    }
-
-    body {
-        background-color: #ffffff;
-        color: #000000;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        opacity: 0 !important;
+        visibility: hidden !important;
     }
     
+    /* 3. STRUTTURA DEL FOGLIO DI STAMPA */
     .recipe-detail { 
         position: relative; 
         padding: 0; 
-        background: #ffffff;
+        background: #ffffff !important;
+        background-color: #ffffff !important;
         width: 100% !important;
     }
     
     .recipe-paper { 
         border: none; 
         padding: 0; 
+        background: #ffffff !important;
     }
     
-    /* BLOCCO CRITICO: Forza la visualizzazione tabellare in stampa annullando il responsive dello smartphone */
+    /* 4. STRUTTURA DELLE TABELLE (I tuoi comandi originali mantenuti intatti) */
     .recipe-meta-table, 
     .recipe-ingredients-table {
         display: table !important;
@@ -777,7 +790,6 @@ body {
         display: table-row !important;
     }
     
-    /* Le colonne del foglio stampato restano speculari e bloccate al 50% ciascuna */
     .recipe-meta-table td, 
     .recipe-ingredients-table td {
         display: table-cell !important;
@@ -786,6 +798,7 @@ body {
         padding: 5px 10px 5px 0 !important;
         vertical-align: top !important;
         border-bottom: none !important;
+        color: #000000 !important; /* Forza il testo delle tabelle in nero */
     }
     
     .recipe-ingredients-table td:empty {
@@ -794,5 +807,6 @@ body {
 
     h2.section-title {
         page-break-after: avoid;
+        color: #000000 !important;
     }
 }
