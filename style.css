@@ -615,6 +615,15 @@ body {
     transform: translateY(20px);
 }
 
+.app-footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    font-size: 13px;
+    color: var(--brand-light); /* Colore leggermente più tenue per non distrarre */
+}
+
 /* ==========================================================================
    --- APERTURA SCHERMO RESPONSIVE PER TABLET E DESKTOP (RIPRISTINA COLONNE SITO) ---
    ========================================================================== */
@@ -701,6 +710,10 @@ body {
         transform: none; 
         background-color: var(--primary-color, #e05a47);
     }
+
+    .app-footer {
+        margin-bottom: 20px;
+    }
 }
 
 /* ==========================================================================
@@ -712,6 +725,25 @@ body {
     .no-print { display: none !important; }
     .print-only { display: inline-block !important; }
     
+    /* Forza i colori di base del documento in modalità chiara */
+    :root, body {
+        background-color: #ffffff !important;
+        color: #1a1a1a !important;
+        --brand-dark: #1e3a2f !important;
+        --text-dark: #1a1a1a !important;
+        --bg-light: #ffffff !important;
+        --border-color: #cccccc !important;
+    }
+
+    /* Rende invisibili gli elementi di navigazione che non servono nel PDF */
+    .sidebar-filters, 
+    .nav-buttons, 
+    .back-to-top, 
+    #btn-fav-detail,
+    footer {
+        display: none !important;
+    }
+
     body {
         background-color: #ffffff;
         color: #000000;
