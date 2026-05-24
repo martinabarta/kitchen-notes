@@ -6,7 +6,7 @@ let preferiti = JSON.parse(localStorage.getItem('ricette_preferite')) || [];
 
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-        const responseIndice = await fetch('ricette/lista-ricette.json');
+        const responseIndice = await fetch('lista-ricette.json');
         const indiceRicette = await responseIndice.json();
         
         const caricamenti = indiceRicette.map(ricettaInfo => 
@@ -16,6 +16,27 @@ window.addEventListener('DOMContentLoaded', async () => {
         
         generaCheckboxFrigo();
         filtraRicette();
+
+        // --- FIX AVVIO FRECCIA FILTRI SMARTPHONE ---
+        // Verifichiamo se l'utente è su mobile all'apertura del sito
+        const isMobile = window.innerWidth <= 768;
+        const arrow = document.getElementById('toggle-arrow');
+        const sidebar = document.getElementById('sidebar-filters');
+        
+        if (arrow && sidebar) {
+            if (isMobile) {
+                // Di base su smartphone la sidebar parte chiusa (collapsed),
+                // quindi impostiamo subito il testo del pulsante mobile corretto
+                sidebar.classList.add('collapsed');
+                arrow.innerText = "▼ FILTRI";
+            } else {
+                // Su desktop parte aperta
+                sidebar.classList.remove('collapsed');
+                arrow.innerText = "◀";
+            }
+        }
+        // -------------------------------------------
+
     } catch (error) {
         console.error("Errore nel caricamento del database ricette:", error);
     }
