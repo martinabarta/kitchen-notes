@@ -1,0 +1,766 @@
+/* --- TAVOLOZZA COLORI PERSONALIZZATA --- */
+:root {
+    --brand-dark: #386641;       /* Verde scuro per titoli e accenti forti */
+    --brand-medium: #6a994e;     /* Verde medio per elementi interattivi e sotto-voci */
+    --brand-light: #a7c957;      /* Verde chiaro per bordi e accenti soft */
+    --brand-bg: #ffffff;         /* Sfondo bianco pulito e moderno */
+    --accent-red: #bc4749;       /* Rosso melograno per preferiti e reset filtri */
+    --text-dark: #2f3e46;
+    --border-color: #d8e2dc;
+    --font-serif: "Georgia", serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* BLOCCO FORZATURA FONT: Applica il carattere sans-serif della pagina a qualsiasi elemento di input */
+body, input, select, textarea, button, option {
+    font-family: var(--font-sans) !important;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--brand-bg);
+    color: var(--text-dark);
+    overflow-x: hidden; /* Previene scorrimenti laterali indesiderati */
+}
+
+.hidden { display: none !important; }
+
+/* --- AREA SUPERIORE DI NAVIGAZIONE (HOME CATALOGO) --- */
+.app-header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-area {
+    text-align: center;
+}
+.brand-area h1 {
+    font-family: var(--font-serif) !important;
+    font-size: 26px;
+    color: var(--brand-dark);
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+.brand-area .subtitle {
+    font-size: 9px;
+    color: var(--brand-medium);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+.filter-tabs {
+    display: flex;
+    background: #e9ecef;
+    padding: 4px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 480px;
+}
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 10px 5px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.tab-btn.active {
+    background: white;
+    color: var(--brand-dark);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.search-container {
+    width: 100%;
+    max-width: 550px;
+}
+.search-wrapper {
+    position: relative;
+    width: 100%;
+}
+.search-wrapper input {
+    width: 100%;
+    padding: 11px 15px 11px 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s;
+    background-color: white;
+    color: var(--text-dark);
+}
+.search-wrapper input::placeholder {
+    color: #8d99ae;
+}
+.search-wrapper input:focus {
+    border-color: var(--brand-medium);
+    box-shadow: 0 0 0 3px rgba(106, 153, 78, 0.12);
+}
+.search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--brand-medium);
+    display: flex;
+    align-items: center;
+}
+
+/* --- INTERFACCIA APP INTERNA (LAYOUT HOME) --- */
+.app-layout {
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 180px);
+    width: 100%;
+}
+
+.sidebar-filters {
+    width: 260px;
+    background-color: white;
+    border-right: 1px solid var(--border-color);
+    padding: 25px 20px;
+    height: auto;
+    transition: width 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0;
+}
+.sidebar-filters.collapsed {
+    width: 0;
+    padding: 25px 0;
+    overflow: hidden;
+    border-right: none;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 6px;
+}
+.sidebar-header h3 {
+    font-family: var(--font-serif) !important;
+    font-size: 16px;
+    color: var(--brand-dark);
+    font-weight: normal;
+}
+.btn-reset {
+    background: transparent;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent-red);
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-reset:hover {
+    text-decoration: underline;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 18px;
+}
+.filter-group label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--brand-medium);
+    text-transform: uppercase;
+}
+.filter-group select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: white;
+    font-size: 13px;
+    outline: none;
+    color: var(--text-dark);
+}
+
+
+.frigo-search-wrapper { 
+    margin-bottom: 10px; /* Ridotto il margine inferiore */
+}
+
+.frigo-search-wrapper input {
+    width: 100%;
+    padding: 6px 10px; /* Ridotto il padding interno del campo di ricerca */
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    color: var(--text-dark);
+}
+
+/* --- COMPATTEZZA E SCORRIMENTO INTERNO INGREDIENTI (DESKTOP) --- */
+.checkbox-sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* Usa vh (viewport height): l'elenco occuperà al massimo il 40% dell'altezza dello schermo */
+    max-height: 40vh; 
+    overflow-y: auto;
+    padding: 8px;
+    border: 1px solid #f1f3f5;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+/* Personalizzazione della barra di scorrimento per renderla più sottile ed elegante */
+.checkbox-sidebar-list::-webkit-scrollbar {
+    width: 6px;
+}
+.checkbox-sidebar-list::-webkit-scrollbar-track {
+    background: #f1f3f5;
+    border-radius: 6px;
+}
+.checkbox-sidebar-list::-webkit-scrollbar-thumb {
+    background: var(--brand-light);
+    border-radius: 6px;
+}
+
+.checkbox-sidebar-list label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px; /* Testo leggermente più piccolo e discreto */
+    cursor: pointer;
+    user-select: none;
+    line-height: 1.3;
+}
+
+/* Rimpicciolisce leggermente il quadratino di check per allinearsi al testo ridotto */
+.checkbox-sidebar-list input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+}
+
+.sidebar-toggle-handle {
+    width: 22px;
+    background-color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    border-left: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 10px;
+    color: white;
+    transition: background-color 0.2s, opacity 0.2s;
+    user-select: none;
+    outline: none;
+    z-index: 10;
+}
+.sidebar-toggle-handle:hover {
+    opacity: 0.9;
+}
+
+.main-content {
+    flex: 1;
+    padding: 25px 15px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.summary-box {
+    background: #f8f9fa;
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+.summary-box h4 { font-size: 13px; color: var(--brand-dark); margin-bottom: 8px; font-weight: 600; }
+.tags-container { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { background-color: var(--brand-medium); color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; }
+.placeholder-text { font-style: italic; color: #8d99ae; font-size: 13px; }
+
+/* --- GRIGLIA RICETTE (HOME) --- */
+.category-block { margin-bottom: 35px; }
+.category-block h2 {
+    font-family: var(--font-serif) !important;
+    font-size: 22px;
+    font-weight: normal;
+    color: var(--brand-dark);
+    border-bottom: 2px solid var(--brand-light);
+    padding-bottom: 4px;
+    margin-bottom: 15px;
+}
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+}
+.recipe-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.recipe-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 102, 65, 0.08);
+}
+.recipe-card h3 { 
+    font-family: var(--font-serif) !important; 
+    font-size: 17px; 
+    font-weight: normal; 
+    color: var(--text-dark); 
+    padding-right: 25px; 
+}
+.recipe-card .card-subtitle {
+    font-size: 12px;
+    color: var(--brand-medium);
+    margin-top: 3px;
+    margin-bottom: 8px;
+    font-style: italic;
+    line-height: 1.3;
+    padding-right: 25px;
+}
+.recipe-card .card-meta { font-size: 12px; color: #6c757d; margin-top: 6px; }
+.fav-icon { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 15px; cursor: pointer; z-index: 5; }
+
+
+/* ==========================================================================
+   --- VISTA PAGINA DETTAGLIO RICETTA (COMPATIBILE MOBILE + DUE COLONNE PDF) ---
+   ========================================================================== */
+.recipe-detail {
+    background-color: #ffffff;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 250;
+    padding: 20px 15px;
+}
+
+.detail-container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    width: 100%;
+}
+
+.recipe-paper { 
+    background: #ffffff; 
+    padding: 0; 
+    width: 100%;
+}
+
+/* Barra superiore dei pulsanti (A schermo diventa flessibile a griglia su mobile) */
+.recipe-header-actions { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px; 
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.btn-primary, .btn-secondary, .btn-back { 
+    padding: 10px 12px; 
+    border-radius: 6px; 
+    font-size: 13px; 
+    cursor: pointer; 
+    font-weight: 500; 
+    text-align: center;
+}
+.btn-back {
+    background: transparent;
+    border: none;
+    color: var(--brand-medium);
+    font-weight: bold;
+    padding-left: 0;
+    margin-bottom: 15px;
+    display: inline-block;
+    text-align: left;
+}
+.btn-primary { background: var(--brand-medium); color: white; border: none; grid-column: span 2; }
+.btn-primary:hover { background: var(--brand-dark); }
+.btn-secondary { background: white; border: 1px solid var(--border-color); color: var(--text-dark); }
+.btn-secondary:hover { background: #f8f9fa; }
+
+/* 1. Intestazione (Titolo e Sottotitolo Ricetta) */
+.recipe-header-block {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--brand-light);
+}
+.recipe-main-title { 
+    font-family: var(--font-serif) !important; 
+    font-size: 24pt; 
+    font-weight: normal; 
+    color: var(--brand-dark); 
+    margin: 0 0 6px 0; 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+.recipe-subtitle {
+    font-size: 11pt;
+    color: var(--brand-medium);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* 2. Griglia Metadati Strutturata (Di base a 1 colonna su Mobile per non spezzarsi) */
+.recipe-meta-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.recipe-meta-table td {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 11pt;
+    border-bottom: 1px dashed var(--border-color);
+}
+.meta-label {
+    font-weight: bold;
+    color: var(--brand-dark);
+}
+.meta-value {
+    color: var(--text-dark);
+}
+
+/* Selettore porzioni touch-friendly */
+.portions-selector {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 8px;
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #f8f9fa;
+}
+.portions-selector button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--brand-medium);
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 4px;
+}
+
+/* 3. Titoli delle Sezioni */
+.recipe-paper h2.section-title {
+    font-family: var(--font-serif) !important;
+    font-size: 14pt;
+    color: var(--brand-dark);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 4. Ingredienti (A una colonna nativa a schermo per schermi piccoli) */
+.recipe-ingredients-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.recipe-ingredients-table td {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 11pt;
+}
+/* Nasconde le celle vuote di bilanciamento su smartphone */
+.recipe-ingredients-table td:empty { display: none; }
+
+.ingredient-bullet {
+    position: relative;
+    padding-left: 18px;
+    line-height: 1.4;
+}
+.ingredient-bullet::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--brand-light);
+    font-weight: bold;
+    font-size: 14pt;
+    top: -2px;
+}
+
+/* 5. Procedimento, Note e Varianti */
+.recipe-step-block {
+    margin-bottom: 18px;
+    font-size: 11pt;
+    line-height: 1.5;
+}
+.recipe-step-title {
+    font-weight: bold;
+    color: var(--brand-medium);
+    margin-bottom: 4px;
+    font-size: 10.5pt;
+    text-transform: uppercase;
+}
+.recipe-info-text {
+    font-size: 11pt;
+    color: var(--text-dark);
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Rimuove i pallini dalle liste delle note, varianti e conservazione */
+.recipe-info-group .styled-list {
+    list-style-type: none; /* Toglie il pallino dell'elenco */
+    padding-left: 0;       /* Allinea il testo perfettamente a sinistra */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;              /* Crea un leggero spazio verticale tra un punto e l'altro */
+}
+
+/* Opzionale: se vuoi dare un tocco editoriale, puoi formattare i singoli elementi */
+.recipe-info-group .styled-list li {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-dark);
+}
+
+/* Spaziamento per i blocchi delle varirutture complesse */
+.variant-block {
+    margin-bottom: 20px;
+}
+
+/* Margine superiore per staccare la descrizione dagli ingredienti della variante */
+.variant-description {
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+/* Leggero rientro per gli ingredienti della variante così da distinguerli dal titolo */
+.variant-ingredients {
+    margin: 6px 0 !important;
+    padding-left: 10px !important;
+    font-style: italic;
+}
+
+/* 6. Conservazione */
+.recipe-storage-subtitle {
+    font-weight: bold;
+    color: var(--brand-medium);
+    font-size: 10pt;
+    text-transform: uppercase;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+.recipe-storage-text {
+    font-size: 11pt;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+/* Stile del pulsante Torna Su fluttuante (Sistemato con le tue variabili colore) */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: var(--accent-red); /* Corretto: usa il tuo rosso */
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    background-color: var(--brand-dark); /* Cambia colore al passaggio del mouse usando il tuo verde scuro */
+}
+
+/* Classe di utility per nascondere l'elemento in modo fluido */
+.back-to-top.hidden {
+    opacity: 0;
+    pointer-events: none; /* Impedisce di cliccarlo quando è invisibile */
+    transform: translateY(20px);
+}
+
+/* ==========================================================================
+   --- APERTURA SCHERMO RESPONSIVE PER TABLET E DESKTOP (RIPRISTINA COLONNE SITO) ---
+   ========================================================================== */
+@media(min-width: 769px) {
+    .app-header { padding: 25px 20px 20px 20px; gap: 20px; }
+    
+    .recipe-header-actions { 
+        display: flex; 
+        justify-content: flex-end; 
+        gap: 8px; 
+    }
+    .btn-primary { width: auto; grid-column: auto; }
+    
+    /* Ripristina il layout a due colonne sul sito per schermi grandi */
+    .recipe-meta-table td, 
+    .recipe-ingredients-table td {
+        display: table-cell;
+        width: 50%;
+        padding: 6px 10px 6px 0;
+    }
+    .recipe-meta-table tr { display: table-row; }
+    .recipe-meta-table td { border-bottom: none; }
+    .recipe-ingredients-table tr { display: table-row; }
+    .recipe-ingredients-table td:empty { display: table-cell; }
+    
+    .recipe-main-title { font-size: 26pt; }
+}
+
+/* Gestione Sidebar a scomparsa per schermi piccoli (Filtri e pulsante in ALTO) */
+@media(max-width: 768px) {
+    .app-layout { 
+        flex-direction: column; 
+    }
+    
+    .sidebar-filters {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 15px 15px;
+        transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+        max-height: 480px; /* Aumentato per contenere comodamente filtri + ingredienti su smartphone */
+        overflow-y: auto;
+        opacity: 1;
+    }
+    
+    /* Quando è collassata, si chiude verso l'alto scomparendo fluidamente */
+    .sidebar-filters.collapsed {
+        max-height: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        border-bottom: none;
+        opacity: 0;
+    }
+    
+    /* Il pulsante ora fa da cappello flessibile in alto */
+    .sidebar-toggle-handle {
+        width: 100%;
+        height: 34px;
+        border: 1px solid var(--accent-red);
+        border-left: none;
+        border-right: none;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .sidebar-filters .checkbox-sidebar-list {
+        /* Su smartphone limitiamo l'altezza al 25% dello schermo per lasciare spazio alle ricette */
+        max-height: 25vh; 
+    }
+
+    .back-to-top {
+        bottom: 20px;  /* Più basso su mobile per non fluttuare in mezzo alla pagina */
+        right: 20px;   /* Più vicino al bordo */
+        width: 40px;   /* Leggermente più piccolo per salvaguardare lo spazio visivo */
+        height: 40px;
+        font-size: 14px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombra leggermente più marcata per risaltare */
+    }
+    
+    /* Elimina l'effetto hover su mobile (i telefoni non hanno il mouse, l'hover crea bug visivi) */
+    .back-to-top:hover {
+        transform: none; 
+        background-color: var(--primary-color, #e05a47);
+    }
+}
+
+/* ==========================================================================
+   --- BLOCCO STAMPA E PDF: FORZA RIGIDAMENTE LE DUE COLONNE SU CARTA A4 ---
+   ========================================================================== */
+.print-only { display: none !important; }
+
+@media print {
+    .no-print { display: none !important; }
+    .print-only { display: inline-block !important; }
+    
+    body {
+        background-color: #ffffff;
+        color: #000000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .recipe-detail { 
+        position: relative; 
+        padding: 0; 
+        background: #ffffff;
+        width: 100% !important;
+    }
+    
+    .recipe-paper { 
+        border: none; 
+        padding: 0; 
+    }
+    
+    /* BLOCCO CRITICO: Forza la visualizzazione tabellare in stampa annullando il responsive dello smartphone */
+    .recipe-meta-table, 
+    .recipe-ingredients-table {
+        display: table !important;
+        width: 100% !important;
+        border-collapse: collapse !important;
+        page-break-inside: avoid;
+    }
+    
+    .recipe-meta-table tr, 
+    .recipe-ingredients-table tr {
+        display: table-row !important;
+    }
+    
+    /* Le colonne del foglio stampato restano speculari e bloccate al 50% ciascuna */
+    .recipe-meta-table td, 
+    .recipe-ingredients-table td {
+        display: table-cell !important;
+        width: 50% !important;
+        box-sizing: border-box !important;
+        padding: 5px 10px 5px 0 !important;
+        vertical-align: top !important;
+        border-bottom: none !important;
+    }
+    
+    .recipe-ingredients-table td:empty {
+        display: table-cell !important;
+    }
+
+    h2.section-title {
+        page-break-after: avoid;
+    }
+}

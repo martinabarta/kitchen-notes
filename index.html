@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kitchen Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="app-header no-print">
+        <div class="brand-area">
+            <h1>Kitchen Notes</h1>
+            <p class="subtitle">Ricette di famiglia e piccoli esperimenti riusciti</p>
+        </div>
+        
+        <div class="filter-tabs">
+            <button class="tab-btn active" id="tab-tutte" onclick="switchTab('tutte')">Archivio</button>
+            <button class="tab-btn" id="tab-frigo" onclick="switchTab('frigo')">Svuota-Frigo</button>
+            <button class="tab-btn" id="tab-preferiti" onclick="switchTab('preferiti')">❤️ Preferiti</button>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-wrapper">
+                <span class="search-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+                <input type="text" id="search-input" placeholder="Cerca una ricetta o un ingrediente..." oninput="filtraRicette()">
+            </div>
+        </div>
+    </header>
+
+    <div class="app-layout no-print" id="main-app-layout">
+        
+
+        <aside class="sidebar-filters" id="sidebar-filters">
+    
+        <div id="standard-filters-group" class="sidebar-section">
+            <div class="sidebar-header">
+                <h3>Filtra Ricette</h3>
+                <button class="btn-reset" onclick="resetFiltriStandard()">Azzera</button>
+            </div>
+            
+            <div class="filter-group">
+                <label>Tipologia</label>
+                <select id="filter-category" onchange="filtraRicette()">
+                    <option value="">Tutte le categorie</option>
+                    <option value="Antipasti">Antipasti</option>
+                    <option value="Primi piatti">Primi piatti</option>
+                    <option value="Secondi piatti">Secondi piatti</option>
+                    <option value="Contorni">Contorni</option>
+                    <option value="Basi">Basi</option>
+                    <option value="Salse">Salse</option>
+                    <option value="Dolci">Dolci</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Preparazione</label>
+                <select id="filter-time-range" onchange="filtraRicette()">
+                    <option value="all">Qualsiasi durata</option>
+                    <option value="veloce">Veloci (fino a 15 min)</option>
+                    <option value="medio">Medie (15 - 45 min)</option>
+                    <option value="lungo">Lunghe (oltre 45 min)</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Difficoltà</label>
+                <select id="filter-difficulty" onchange="filtraRicette()">
+                    <option value="">Qualsiasi difficoltà</option>
+                    <option value="Facile">Facile</option>
+                    <option value="Media">Media</option>
+                    <option value="Difficile">Difficile</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="frigo-ingredients-group" class="sidebar-section hidden">
+            <div class="sidebar-header">
+                <h3>Il tuo Frigo</h3>
+                <button class="btn-reset" onclick="resetFiltriFrigo()">Azzera</button>
+            </div>
+            <div class="frigo-search-wrapper">
+                <input type="text" id="frigo-search" placeholder="Cerca ingrediente..." oninput="filtraCheckboxFrigo()">
+            </div>
+            <div id="frigo-checkboxes" class="checkbox-sidebar-list"></div>
+        </div>
+    </aside>
+
+        <button class="sidebar-toggle-handle" id="sidebar-toggle-btn" onclick="toggleSidebar()" title="Nascondi/Mostra Filtri">
+            <span id="toggle-arrow">◀</span>
+        </button>
+
+        <main class="main-content">
+            <div id="frigo-summary-box" class="summary-box hidden">
+                <h4>Ingredienti selezionati nel frigo:</h4>
+                <div id="frigo-summary-tags" class="tags-container">
+                    <span class="placeholder-text">Nessun ingrediente selezionato</span>
+                </div>
+            </div>
+
+            <section class="results-area" id="results-area"></section>
+        </main>
+    </div>
+
+    <div id="recipe-detail-view" class="recipe-detail hidden">
+        <div class="detail-container">
+            <button class="btn-back no-print" onclick="chiudiRicetta()">← Torna all'archivio</button>
+            
+            <article class="recipe-paper">
+                <div class="recipe-header-actions no-print">
+                    <button onclick="togglePreferitoAttuale()" id="btn-fav-detail" class="btn-secondary">🤍 Aggiungi ai Preferiti</button>
+                    <button onclick="window.print()" class="btn-secondary">🖨️ Stampa Scheda</button>
+                    <button onclick="condividiRicetta()" class="btn-secondary">🔗 Condividi</button>
+                    <button onclick="inviaSpesa()" class="btn-primary">💬 Invia Lista Spesa</button>
+                </div>
+
+                <div class="recipe-header-block">
+                    <h1 id="det-title" class="recipe-main-title">Titolo della Ricetta</h1>
+                    <p id="det-subtitle" class="recipe-subtitle">Sottotitolo della ricetta</p>
+                </div>
+                
+                <table class="recipe-meta-table">
+                    <tr>
+                        <td><span class="meta-label">TIPOLOGIA:</span> <span id="det-category" class="meta-value">---</span></td>
+                        <td><span class="meta-label">TEMPO TOTALE:</span> <span id="det-total-time" class="meta-value">0 min</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="meta-label">PORZIONI:</span> 
+                            <span class="portions-selector no-print">
+                                <button onclick="cambiaPorzioni(-1)">-</button>
+                                <span id="det-portions">4</span>
+                                <button onclick="cambiaPorzioni(1)">+</button>
+                            </span>
+                            <span id="det-portions-print" class="print-only">4</span>
+                        </td>
+                        <td><span class="meta-label">TEMPO DI PREPARAZIONE:</span> <span id="det-prep-time" class="meta-value">0 min</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="meta-label">DIFFICOLTÀ:</span> <span id="det-difficulty" class="meta-value">---</span></td>
+                        <td><span class="meta-label">TEMPO DI COTTURA:</span> <span id="det-cook-time" class="meta-value">0 min</span></td>
+                    </tr>
+                </table>
+
+                <h2 class="section-title">Ingredienti</h2>
+                <table id="det-ingredients-table" class="recipe-ingredients-table">
+                    </table>
+
+                <h2 class="section-title">Procedimento</h2>
+                <div id="det-instructions-container">
+                    </div>
+                
+                <div id="blk-notes" class="recipe-info-group hidden">
+                    <h2 class="section-title">Note</h2>
+                    <ul id="det-notes-list" class="styled-list"></ul>
+                </div>
+
+                <div id="blk-variants" class="recipe-info-group hidden">
+                    <h2 class="section-title">Varianti</h2>
+                    <div id="det-variants-container"></div>
+                </div>
+
+                <div id="blk-storage" class="recipe-info-group hidden">
+                    <h2 class="section-title">Conservazione</h2>
+                    
+                    <div class="recipe-storage-subtitle">Frigorifero</div>
+                    <ul id="det-storage-frigo" class="styled-list"></ul>
+                    
+                    <div class="recipe-storage-subtitle">Freezer</div>
+                    <ul id="det-storage-freezer" class="styled-list"></ul>
+                </div>
+
+            </article>
+        </div>
+    </div>
+
+    <button id="btn-back-to-top" class="back-to-top hidden" onclick="tornaInAlto()" title="Torna all'inizio">
+        ▲
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
