@@ -397,7 +397,7 @@ body {
     display: inline-block;
     text-align: left;
 }
-.btn-primary { background: var(--brand-medium); color: white; border: none; grid-column: span 2; }
+.btn-primary { background: var(--brand-medium); color: white; border: none; }
 .btn-primary:hover { background: var(--brand-dark); }
 .btn-secondary { background: white; border: 1px solid var(--border-color); color: var(--text-dark); }
 .btn-secondary:hover { background: #f8f9fa; }

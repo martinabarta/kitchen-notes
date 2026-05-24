@@ -1,19 +1,25 @@
-let tutteLeRicette = [];
-let currentTab = 'tutte';
-let activeRecipe = null;
-let currentPortions = 4;
-let preferiti = JSON.parse(localStorage.getItem('ricette_preferite')) || [];
+// --- STATO GLOBALE DELL'APPLICAZIONE ---
+let tutteLeRicette = []; // Contiene gli oggetti completi di tutte le ricette iniettate via JSON
+let currentTab = 'tutte'; // Stato della scheda attiva: 'tutte' (Archivio), 'frigo' (Svuota-Frigo), 'preferiti'
+let activeRecipe = null; // Memorizza la ricetta attualmente visualizzata nella vista di dettaglio
+let currentPortions = 4; // Contatore dinamico per il ricalcolo delle proporzioni degli ingredienti
+let preferiti = JSON.parse(localStorage.getItem('ricette_preferite')) || []; // Sincronizzazione persistente dei preferiti locale
 
+// --- INIZIALIZZAZIONE ASINCRONA DEL DATABASE ---
+// DOMContentLoaded assicura che l'HTML sia pronto prima di eseguire le chiamate Fetch
 window.addEventListener('DOMContentLoaded', async () => {
     try {
+         // Carica il file indice posizionato nella cartella radice del progetto (lista-ricette.json)
         const responseIndice = await fetch('lista-ricette.json');
         const indiceRicette = await responseIndice.json();
         
+        // Esegue il caricamento parallelo (Promise.all) di tutti i singoli file JSON delle ricette
         const caricamenti = indiceRicette.map(ricettaInfo => 
             fetch(ricettaInfo.file).then(res => res.json())
         );
         tutteLeRicette = await Promise.all(caricamenti);
         
+         // Genera la lista dei checkbox univoci nell'HTML e avvia il primo rendering dei dati
         generaCheckboxFrigo();
         filtraRicette();
 
@@ -25,13 +31,10 @@ window.addEventListener('DOMContentLoaded', async () => {
         
         if (arrow && sidebar) {
             if (isMobile) {
-                // Di base su smartphone la sidebar parte chiusa (collapsed),
-                // quindi impostiamo subito il testo del pulsante mobile corretto
-                sidebar.classList.add('collapsed');
+                sidebar.classList.add('collapsed'); // Forza la chiusura della barra su mobile per non coprire i piatti
                 arrow.innerText = "▼ FILTRI";
             } else {
-                // Su desktop parte aperta
-                sidebar.classList.remove('collapsed');
+                sidebar.classList.remove('collapsed'); // Mantiene la barra aperta su schermi PC grandi
                 arrow.innerText = "◀";
             }
         }
@@ -42,6 +45,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
+// --- GESTIONE INTERFACCIA SIDEBAR (COLLAPSE/EXPAND) ---
 function toggleSidebar() {
     const sidebar = document.getElementById('sidebar-filters');
     const arrow = document.getElementById('toggle-arrow');
@@ -57,9 +61,11 @@ function toggleSidebar() {
     }
 }
 
-// Integrazione nella funzione switchTab per aggiornare la freccia al cambio tab
+// --- COMMUTAZIONE DELLE SCHEDE (TAB NAVIGATION) ---
 function switchTab(tabName) {
     currentTab = tabName;
+
+     // Aggiorna lo stato grafico dei pulsanti della navbar superiore
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.getElementById(`tab-${tabName}`).classList.add('active');
     
@@ -410,7 +416,7 @@ function condividiRicetta() {
 }
 
 function inviaSpesa() {
-    let testo = `🛒 *Lista della Spesa: ${activeRecipe.title} (${currentPortions} porzioni)*\n`;
+    let testo = `*Lista della Spesa: ${activeRecipe.title} (${currentPortions} porzioni)*\n`;
     const baseServings = activeRecipe.baseServings || 4;
     activeRecipe.ingredients.forEach(ingr => {
         const qty = Math.round(((ingr.qty / baseServings) * currentPortions) * 10) / 10;
@@ -460,10 +466,9 @@ function gestisciVisualizzazionePulsanteSu() {
     }
 }
 
-// Funzione che sposta lo scroll all'inizio della pagina
 function tornaInAlto() {
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Rende lo scorrimento morbido e continuo, non uno scatto secco
+        behavior: 'smooth'
     });
 }
