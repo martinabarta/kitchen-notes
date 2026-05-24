@@ -1,0 +1,38 @@
+{
+    "id": 9,
+    "title": "Gnocchi di spinaci ripieni di mozzarella",
+    "subtitle": "",
+    "category": "Primi piatti",
+    "difficulty": "Facile",
+    "baseServings": 3,
+    "time": 35,
+    "prepTime": 30,
+    "cookTime": 5,
+    "ingredients": [
+        { "name": "Spinaci", "qty": 200, "unit": "gr" },
+        { "name": "Uovo", "qty": 1, "unit": "" },
+        { "name": "Farina 00", "qty": 70, "unit": "gr" },
+        { "name": "Parmigiano grattugiato", "qty": 25, "unit": "gr" },
+        { "name": "Mozzarella", "qty": 125, "unit": "gr" },
+        { "name": "Sale", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Cuocere gli spinaci, lasciarli intiepidire e strizzarli molto bene con le mani, eliminando tutta l'acqua in eccesso.",
+        "Tritare gli spinaci finemente e unirli in una ciotola con uovo, parmigiano e sale. Mescolare bene e aggiungere poco alla volta la farina, fino ad ottenere un impasto morbido, compatto e lavorabile, ma non troppo duro.",
+        "Tagliare la mozzarella a cubetti piccoli e tamponarla con carta da cucina per eliminare l'umidità in eccesso.",
+        "Prelevare una piccola quantità di impasto e schiacciarla leggermente sul palmo della mano. Inserire al centro la mozzarella e richiudere formando una pallina ben sigillata.",
+        "Cuocere gli gnocchi in abbondante acqua salata fino a quando non salgono a galla; a quel punto scolarli e condire a piacere."
+    ],
+    "notes":[
+        "In base all'umidità dell'impasto potrebbe essere necessaria più farina, aggiungerla poco alla volta fino ad ottenere la consistenza corretta."
+    ],
+    "variants": [],
+    "storageFrigo": [
+        "Gli gnocchi, sia crudi che cotti, si conservano in frigorifero per massimo 1 giorno.",
+        "Se crudi, devono esser riposti su un vassoio infarinato; se cotti, devono esser conservati in un contenitore ermetico."
+    ],
+    "storageFreezer": [
+        "Disporre gli gnocchi su un vassoio infarinato e congelarli per 2 ore; trasferirli successivamente in un sacchetto gelo. Si conservano fino a 2 mesi.",
+        "Per cuocerli, non scongelare, ma versare in acqua bollente e procedere come di consueto."
+    ]
+}

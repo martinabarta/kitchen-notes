@@ -1,0 +1,26 @@
+{
+    "id": 26,
+    "title": "Crema al mascarpone",
+    "subtitle": "senza albumi & con uova pastorizzate",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": "",
+    "time": 10,
+    "prepTime": 10,
+    "cookTime": "",
+    "ingredients": [
+        { "name": "Tuorli", "qty": 2, "unit": "" },
+        { "name": "Zucchero semolato", "qty": 60, "unit": "gr" },
+        { "name": "Acqua", "qty": 3, "unit": "cucchiai" },
+        { "name": "Mascarpone", "qty": 250, "unit": "gr" }
+    ],
+    "instructions": [
+        "Montare i tuorli con 10 gr di zucchero finchè diventano chiari.",
+        "In un pentolino unire 50 gr di zucchero e l’acqua, portare a 121° (= fino allo stadio di “piccola bolla”). Versare lo sciroppo bollente a filo sui tuorli mentre si continua a montare: il risultato sarà una base gonfia, stabile e profumatissima.",
+        "Aggiungere il mascarpone poco alla volta, mescolando delicatamente dal basso verso l’alto fino ad ottenere una crema liscia e vellutata."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

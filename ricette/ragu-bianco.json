@@ -1,0 +1,46 @@
+{
+    "id": 3,
+    "title": "Ragù bianco",
+    "subtitle": "",
+    "category": "Primi piatti",
+    "difficulty": "Facile",
+    "baseServings": 6,
+    "time": 40,
+    "prepTime": 10,
+    "cookTime": 30,
+    "ingredients": [
+        { "name": "Soffritto", "qty": 60, "unit": "gr" },
+        { "name": "Carne macinata mista", "qty": 500, "unit": "gr" },
+        { "name": "Pancetta dolce", "qty": 80, "unit": "gr" },
+        { "name": "Vino bianco", "qty": 120, "unit": "ml" },
+        { "name": "Brodo di carne", "qty": "200", "unit": "ml" },
+        { "name": "Olio evo", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "In una pentola, soffriggere il sedano, la carota e la cipolla in 2 - 3 cucchiai di olio evo per circa 5 min.",
+        "Tritare la pancetta, aggiungerla in pentola e rosolare finchè inizierà a sciogliersi il grasso.",
+        "Unire la carne macinata, cuocere a fuoco medio-basso per circa 10 min.",
+        "Versare il vino e lasciar evaporare l'alcol.",
+        "Aggiungere il brodo, coprire con il coperchio e lasciar cuocere per 30 min finchè non avrà raggiungo una consistenza morbida ma non liquida.",
+        "A metà cottura regolare di sale e pepe."
+    ],
+    "notes": [],
+    "variants": [
+        {
+        "name": "Ragù bianco CON SALSICCIA",
+        "ingredients": [
+            "250 gr di salsiccia"
+        ],
+        "description": "Sgranare la salsiccia ed aggiungerla insieme al macinato."
+        }
+    ],
+    "storageFrigo": [
+        "Un volta porzionato, si può conservare in frigorifero per 1 giorno."
+    ],
+    "storageFreezer": [
+        "Una volta pozionato, si può conservare in freezer per 2 - 3 mesi.",
+        "Si può scongelare in frigorifero, oppure utilizzare direttamente scaldandolo in una pentola o padella."
+    ]
+}

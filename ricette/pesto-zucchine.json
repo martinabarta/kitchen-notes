@@ -1,0 +1,41 @@
+{
+    "id": 21,
+    "title": "Pesto di zucchine",
+    "subtitle": "",
+    "category": "Salse",
+    "difficulty": "Facile",
+    "baseServings": "",
+    "time": 15,
+    "prepTime": 15,
+    "cookTime": "",
+    "ingredients": [
+        { "name": "Zucchine", "qty": 2, "unit": "" },
+        { "name": "Madorle", "qty": 50, "unit": "gr" },
+        { "name": "Parmigiano grattugiato", "qty": 50, "unit": "gr" },
+        { "name": "Aglio", "qty": 1, "unit": "spicchio" },
+        { "name": "Olio evo", "qty": 50, "unit": "ml" },
+        { "name": "Basilico fresco", "qty": 10, "unit": "foglie" },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Lavare e asciugare le zucchine. Rimuovere le estremità e tagliarle a pezzetti.",
+        "In un frullatore, aggiungere tutti gli ingredienti e frullare fino ad ottenere una consistenza liscia e cremosa."
+    ],
+    "notes":[
+        "Si possono usare le zucchine crude o, se si preferisce un sapore più delicato, sbollentarle per 2 - 3 min in acqua bollente e poi raffreddarle in acqua ghiacciata."
+    ],
+    "variants": [
+        {
+        "name": "Pesto di zucchine CON RICOTTA",
+        "ingredients": [
+            "100 gr di ricotta fresca"
+        ],
+        "description": ""
+        }
+    ],
+    "storageFrigo": [],
+    "storageFreezer": [
+        "Una volta porzionato, si conserva in freezer fino a 3 mesi."
+    ]
+}

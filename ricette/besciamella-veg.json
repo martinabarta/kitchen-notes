@@ -1,0 +1,32 @@
+{
+    "id": 22,
+    "title": "Besciamella",
+    "subtitle": "vegana",
+    "category": "Basi",
+    "difficulty": "Facile",
+    "baseServings": 4,
+    "time": 15,
+    "prepTime": 5,
+    "cookTime": 10,
+    "ingredients": [
+        { "name": "Farina 00", "qty": 50, "unit": "gr" },
+        { "name": "Olio evo", "qty": 50, "unit": "ml" },
+        { "name": "Latte vegetale", "qty": 500, "unit": "ml" },
+        { "name": "Noce moscata", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Mettere in una pentola la farina e l’olio d’oliva, unire anche il sale e il pepe e mescolare.",
+        "Cuocere per 2 - 3 min fino a quando il composto inizierà a sfrigolare.",
+        "Unire il latte vegetale e mescolare con una frusta.",
+        "Far addensare la besciamella mescolando in continuazione; ci vorranno circa 5 min.",
+        "A fine cottura aggiungere la noce moscata."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [
+        "Si può conservare in frigorifero per un paio di giorni; in questo caso si addenserà molto e per farla tornare cremosa basterà scaldarla aggiungendo poco latte."
+    ],
+    "storageFreezer": []
+}

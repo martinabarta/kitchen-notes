@@ -1,0 +1,29 @@
+{
+    "id": 24,
+    "title": "Taralli pugliesi",
+    "subtitle": "",
+    "category": "Antipasti",
+    "difficulty": "Media",
+    "baseServings": 30,
+    "time": 45,
+    "prepTime": 15,
+    "cookTime": 30,
+    "ingredients": [
+        { "name": "Farina 00", "qty": 270, "unit": "gr" },
+        { "name": "Vino bianco secco", "qty": 100, "unit": "ml" },
+        { "name": "Olio evo", "qty": 60, "unit": "ml" },
+        { "name": "Sale", "qty": 6, "unit": "gr" },
+        { "name": "Pepe", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Mettere in una ciotola la farina, il sale e l’olio e mescolare con un cucchiaio per ottenere un impasto sbriciolato.",
+        "Aggiungere il vino bianco ed impastare fino ad ottenere un panetto elastico e malleabile.",
+        "Mettere l’impasto su un piano da lavoro e staccare dei pezzetti, modellarli con i polpastrelli per ottenere un filoncino. Unire le estremità in modo da ottenere una ciambellina, continuare così fino a terminare l’impasto.",
+        "Mettere a bollire una pentola piena d’acqua e immergere pochi taralli alla volta. Non appena verranno in superficie, scolarli e metterli su un canovaccio o su della carta da cucina e proseguire con la cottura.",
+        "Trasferire i taralli su una teglia con carta da forno e cuocere in forno statico, preriscaldato a 180 °C per circa 30 min."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

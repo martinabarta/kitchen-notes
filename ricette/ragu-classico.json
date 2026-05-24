@@ -1,0 +1,43 @@
+{
+    "id": 2,
+    "title": "Ragù classico",
+    "subtitle": "alla bolognese",
+    "category": "Primi piatti",
+    "difficulty": "Facile",
+    "baseServings": 6,
+    "time": 160,
+    "prepTime": 40,
+    "cookTime": 120,
+    "ingredients": [
+        { "name": "Macinato di manzo", "qty": 400, "unit": "gr" },
+        { "name": "Pancetta dolce", "qty": 150, "unit": "gr" },
+        { "name": "Soffritto", "qty": 60, "unit": "gr" },
+        { "name": "Passata di pomodoro", "qty": 200, "unit": "gr" },
+        { "name": "Doppio concentrato di pomodoro", "qty": 1, "unit": "cucchiaio" },
+        { "name": "Vino rosso", "qty": 1, "unit": "bicchiere" },
+        { "name": "Brodo di carne", "qty": "200", "unit": "gr" },
+        { "name": "Olio evo", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "In una pentola, soffriggere il sedano, la carota e la cipolla in 2 - 3 cucchiai di olio evo.",
+        "Tritare la pancetta, aggiungerla in pentola e rosolare finchè inizierà a sciogliersi il grasso.",
+        "Unire la carne macinata, cuocere a fuoco medio-basso per circa 10 min.",
+        "Versare il vino e lasciar evaporare l'alcol.",
+        "Aggiungere il doppio concentrato di pomodoro, la passata e il brodo caldo.",
+        "Coprire con un coperchio e cuocere a fuoco medio-basso per 2 ore, mescolando di tanto in tanto.",
+        "A metà cottura regolare di sale e pepe."
+    ],
+    "notes": [
+        "Se durante la cottura il ragù dovesse asciugarsi eccessivamente, aggiungere altro brodo."
+    ],
+    "variants": [],
+    "storageFrigo": [
+        "Un volta porzionato, si può conservare in frigorifero per 1 giorno."
+    ],
+    "storageFreezer": [
+        "Una volta pozionato, si può conservare in freezer per 2 - 3 mesi.",
+        "Si può scongelare in frigorifero, oppure utilizzare direttamente scaldandolo in una pentola o padella."
+    ]
+}

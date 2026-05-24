@@ -1,0 +1,30 @@
+{
+    "id": 15,
+    "title": "Pistacchiotti",
+    "subtitle": "",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 16,
+    "time": 25,
+    "prepTime": 13,
+    "cookTime": 12,
+    "ingredients": [
+        { "name": "Crema spalmabile al pistacchio", "qty": 330, "unit": "gr" },
+        { "name": "Farina 00", "qty": 140, "unit": "gr" },
+        { "name": "Uovo", "qty": 1, "unit": "" },
+        { "name": "Granella di pistacchi", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Versare 180 gr di crema spalmabile al pistacchio in una ciotola e aggiungere l’uovo, quindi mescolare con una forchetta o un mestolo.",
+        "Versare la farina 00 e lavorare il composto velocemente fino ad ottenere un panetto compatto e non appiccicoso.",
+        "Dividere l’impasto in palline e disporle su una teglia rivestita da carta forno, quindi con il retro di un mestolo di legno praticare un foro profondo al centro.",
+        "Infornare a 170 °C a forno statico preriscaldato per circa 12 min.",
+        "Una volta cotti, farcirli con la restante crema spalmabile e decorare con la granella di pistacchi."
+    ],
+    "notes":[
+        "Si possono utilizzare 40 gr di farina di pistacchi al posto di 40 gr di farina bianca."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

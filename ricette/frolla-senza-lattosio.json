@@ -1,0 +1,38 @@
+{
+    "id": 13,
+    "title": "Pasta frolla",
+    "subtitle": "senza lattosio",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 4,
+    "time": 10,
+    "prepTime": 10,
+    "cookTime": "",
+    "ingredients": [
+        { "name": "Uovo", "qty": 1, "unit": "" },
+        { "name": "Zucchero semolato", "qty": 50, "unit": "gr" },
+        { "name": "Olio di semi di girasole", "qty": 40, "unit": "gr" },
+        { "name": "Farina 00", "qty": 160, "unit": "gr" },
+        { "name": "Lievito per dolci", "qty": 4, "unit": "gr" },
+        { "name": "Scorza di limone", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Rompere l’uovo in una ciotola e aggiungere lo zucchero.",
+        "Unire l’olio di semi e la scorza di limone (o l’aroma che più si preferisce).",
+        "Aggiungere il lievito e iniziare a mescolare gli ingredienti con le mani.",
+        "Aggiungere la farina poco alla volta.",
+        "Quando l’impasto sarà diventato più sodo, trasferirlo su una spianatoia infarinata e continuare a lavorarlo con le mani aggiungendo la farina un po’ alla volta. Lavorare molto bene l’impasto sulla spianatoia e, se è ancora appiccicoso, aggiungere altra farina.",
+        "La frolla è pronta quando non si attacca più alle dita e l’impasto è elastico e omogeneo."
+    ],
+    "notes":[
+        "Se avanza è possibile avvolgerla con la pellicola per alimenti e conservarla in frigorifero oppure congelarla.",
+        "",
+        "Se si formano dei biscotti, cuocere a 180° in forno statico, o 170° in forno ventilato, per 15 min.",
+        "Se si forma una crostata, cuocere a 180° in forno statico, o 170° in forno ventilato, per 35 - 40 min.",
+        "",
+        "Si può sostituire l'olio di semi di girasole con 100 gr di burro freddo. In questo caso la pasta frolla deve riposare in frigorifero, avvolta in pellicola per alimenti, per almeno 30 min."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

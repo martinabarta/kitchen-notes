@@ -1,0 +1,38 @@
+{
+    "id": 28,
+    "title": "Pesto di peperoni",
+    "subtitle": "",
+    "category": "Salse",
+    "difficulty": "Facile",
+    "baseServings": "",
+    "time": 30,
+    "prepTime": 10,
+    "cookTime": 20,
+    "ingredients": [
+        { "name": "Peperoni", "qty": 2, "unit": "" },
+        { "name": "Pinoli", "qty": 50, "unit": "gr" },
+        { "name": "Parmigiano grattugiato", "qty": 50, "unit": "gr" },
+        { "name": "Aglio", "qty": 1, "unit": "spicchio" },
+        { "name": "Olio evo", "qty": 50, "unit": "ml" },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Lavare, asciugare e arrostire i peperoni in forno a 200° per circa 20 - 25 min, finché la pelle non sarà ben abbrustolita. Una volta pronti, metterli in un sacchetto di plastica per alimenti e lasciarli raffreddare (questo renderà più facile rimuovere la pelle). Quando saranno freddi, rimuovere la pelle.",
+        "In un frullatore, aggiungere tutti gli ingredienti e frullare fino ad ottenere una consistenza liscia e cremosa."
+    ],
+    "notes":[],
+    "variants": [
+        {
+        "name": "Pesto di peperoni CON RICOTTA",
+        "ingredients": [
+            "100 gr di ricotta fresca"
+        ],
+        "description": ""
+        }
+    ],
+    "storageFrigo": [],
+    "storageFreezer": [
+        "Una volta porzionato, si conserva in freezer fino a 3 mesi."
+    ]
+}

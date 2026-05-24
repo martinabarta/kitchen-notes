@@ -1,0 +1,48 @@
+{
+    "id": 25,
+    "title": "Cioccolata calda",
+    "subtitle": "",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 10,
+    "time": 10,
+    "prepTime": 10,
+    "cookTime": "",
+    "ingredients": [
+        { "name": "Amido di mais", "qty": 45, "unit": "gr" },
+        { "name": "Zucchero di canna", "qty": 20, "unit": "gr" },
+        { "name": "Zucchero semolato", "qty": 20, "unit": "gr" },
+        { "name": "Cacao amaro", "qty": 40, "unit": "gr" },
+        { "name": "Cioccolato fondente", "qty": 50, "unit": "gr" }
+    ],
+    "instructions": [
+        "Tritare il cioccolato con un coltello.",
+        "Mescolare tutti gli ingredienti e mettere il preparato in un barattolo ermetico."
+    ],
+    "notes":[],
+    "variants": [
+        {
+        "name": "Cioccolata al caffè",
+        "ingredients": [
+            "3 cucchiaini di caffè solubile"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Cioccolata all'arancia",
+        "ingredients": [
+            "1 cucchiaino di scorza d'arancia"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Cioccolata alla cannella",
+        "ingredients": [
+            "2 cucchiaini di cannella"
+        ],
+        "description": ""
+        }
+    ],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

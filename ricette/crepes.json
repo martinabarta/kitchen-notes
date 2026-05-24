@@ -1,0 +1,31 @@
+{
+    "id": 19,
+    "title": "Crepes",
+    "subtitle": "base",
+    "category": "Basi",
+    "difficulty": "Facile",
+    "baseServings": 6,
+    "time": 45,
+    "prepTime": 40,
+    "cookTime": 5,
+    "ingredients": [
+        { "name": "Uova", "qty": 2, "unit": "" },
+        { "name": "Latte", "qty": 250, "unit": "ml" },
+        { "name": "Olio evo", "qty": 20, "unit": "ml" },
+        { "name": "Farina 00", "qty": 100, "unit": "gr" },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" }
+    ],
+    "instructions": [
+        "In una ciotola capiente sbattere le uova, aggiungere il latte ed un pizzico di sale.",
+        "Setacciare la farina e unirla al composto un po’ alla volta. Per evitare i grumi, mescolare con una frusta, fino ad ottenere un composto liscio e ben amalgamato.",
+        "Coprire la ciotola con pellicola e far riposare per 30 min in frigorifero.",
+        "Scaldare una padella antiaderente e ungerla con un po’ d’olio, poi versare poca pastella e distribuirla in maniera uniforme.",
+        "Lasciar cuocere per qualche minuto a fuoco basso da entrambi i lati."
+    ],
+    "notes":[
+        "Con questa ricetta base si possono creare crëpe dolci, salate, crespelle al forno, fagottini ripieni, ecc."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

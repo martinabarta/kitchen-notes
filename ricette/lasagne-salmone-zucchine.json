@@ -1,0 +1,44 @@
+{
+    "id": 8,
+    "title": "Lasagne salmone e zucchine",
+    "subtitle": "al profumo di limone",
+    "category": "Primi piatti",
+    "difficulty": "Facile",
+    "baseServings": 6,
+    "time": 40,
+    "prepTime": 15,
+    "cookTime": 25,
+    "ingredients": [
+        { "name": "Sfoglia per lasagne", "qty": "", "unit": "q.b." },
+        { "name": "Salmone affumicato", "qty": 200, "unit": "gr" },
+        { "name": "Zucchine", "qty": 400, "unit": "gr" },
+        { "name": "Mozzarella per pizza", "qty": 250, "unit": "gr" },
+        { "name": "Besciamella", "qty": 500, "unit": "ml" },
+        { "name": "Cipolla", "qty": 0.5, "unit": "" },
+        { "name": "Scorza di limone", "qty": "", "unit": "q.b." },
+        { "name": "Pangrattato", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Olio evo", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "In una padella soffriggere mezza cipolla tritata.",
+        "Aggiungere le zucchine tagliate a rondelle, o cubetti, un pizzico di sale e cuocere per circa 5 min.",
+        "In una pirofila mettere un fondo di besciamella e un primo strato di sfoglia; comporre le lasagne alternando besciamella, zucchine, salmone affumicato a pezzetti, scorza di limone e mozzarella tagliata a cubetti.",
+        "Sull'ultimo strato mettere besciamella, mozzarella e pangrattato, per ottenere una bella crosticina dorata.",
+        "Cuocere in forno a 180° per circa 35 min."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [
+        "Le lasagne già assemblate si possono conservare in frigorifero crude, coperte con coperchio o pellicola, per 24 - 36 ore.",
+        "",
+        "Le lasagne cotte, invece, si possono conservare in frigorifero, ben coperte o in un contenitore ermetico, per 2 - 3 giorni.",
+        "Per riscaldarle, mettere in una teglia, coperte con alluminio, in forno a 160° - 170° per 15 - 20 min."
+    ],
+    "storageFreezer": [
+        "Le lasagne, sia crude che cotte, si conservano in freezer per 2 - 3 mesi.",
+        "",
+        "Se congelate crude, cuocerle in forno come di consueto a 170° - 180° per 50 - 60 min.",
+        "Se congelate cotte, scongelarle in frigorifero e successivamente cuocerle normalmente."
+    ]
+}

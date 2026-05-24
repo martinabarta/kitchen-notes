@@ -1,0 +1,35 @@
+{
+    "id": 31,
+    "title": "Torta di cachi",
+    "subtitle": "con frutta secca",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 1,
+    "time": 80,
+    "prepTime": 35,
+    "cookTime": 45,
+    "ingredients": [
+        { "name": "Cachi", "qty": 250, "unit": "gr" },
+        { "name": "Uova", "qty": 3, "unit": "" },
+        { "name": "Zucchero", "qty": 180, "unit": "gr" },
+        { "name": "Olio di semi di girasole", "qty": 80, "unit": "gr" },
+        { "name": "Noci", "qty": 40, "unit": "gr" },
+        { "name": "Nocciole", "qty": 30, "unit": "gr" },
+        { "name": "Mandorle", "qty": 30, "unit": "gr" },
+        { "name": "Farina 2", "qty": 300, "unit": "gr" },
+        { "name": "Lievito per dolci", "qty": 1, "unit": "bustina" },
+        { "name": "Estratto di vaniglia", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" },
+        { "name": "Granella di frutta secca", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Tritare le noci, le nocciole e le mandorle e tostarle in una padella antiaderente per pochi minuti a fiamma moderata, mescolando spesso.",
+        "Ricavare 250 gr di polpa di cachi ben maturi e frullarla.",
+        "In una ciotola, mescolare le uova e lo zucchero fino a quando non diventano gonfie e chiare. Unire l’olio, la purea di cachi e amalgamare delicatamente. Aggiungere la farina setacciata con il lievito, il pizzico di sale e l’aroma. Lavorare il composto fino ad ottenere un impasto liscio e senza grumi. Infine, unire la frutta secca.",
+        "Spennellare lo stampo con olio di semi, versare l’impasto, cospargere con granella di frutta secca e cuocere in forno statico a 175 °C per circa 45 min."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

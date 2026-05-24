@@ -1,0 +1,34 @@
+{
+    "id": 12,
+    "title": "Cookies",
+    "subtitle": "classici",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 16,
+    "time": 75,
+    "prepTime": 45,
+    "cookTime": 30,
+    "ingredients": [
+        { "name": "Farina 00", "qty": 250, "unit": "gr" },
+        { "name": "Burro", "qty": 150, "unit": "gr" },
+        { "name": "Gocce di cioccolato fondente", "qty": 200, "unit": "gr" },
+        { "name": "Uovo", "qty": 1, "unit": "" },
+        { "name": "Zucchero di canna", "qty": 90, "unit": "gr" },
+        { "name": "Zucchero semolato", "qty": 90, "unit": "gr" },
+        { "name": "Lievito per dolci", "qty": 5, "unit": "gr" },
+        { "name": "Estratto di vaniglia", "qty": 1, "unit": "cucchiaino" },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" }
+    ],
+    "instructions": [
+        "Versare in una ciotola lo zucchero semolato e lo zucchero di canna, poi unire l’estratto di vaniglia e il burro morbido. Mescolare energicamente con una frusta per amalgamare il tutto.",
+        "Una volta amalgamato il composto, aggiungere l’uovo intero e mescolare sempre con la frusta.",
+        "A parte mescolare la farina con il lievito per dolci. Versare le polveri nel composto.",
+        "Mescolare con una spatola e, una volta ottenuto un impasto omogeneo, aggiungere un pizzico di sale e le gocce di cioccolato fondente.",
+        "Mescolare un’ultima volta per incorporarle in modo uniforme, poi coprire con pellicola e lasciare rassodare in frigorifero per 30 minuti. Riprendere il composto e formare delle sfere del peso di circa 25 gr ciascuna, senza lavorarle e compattarle troppo.",
+        "Adagiare le palline su una teglia rivestita con carta forno, distanziandole bene fra loro. Cuocere i biscotti in forno statico a 165 °C per 25 - 30 minuti nel ripiano medio del forno."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

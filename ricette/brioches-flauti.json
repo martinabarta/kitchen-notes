@@ -1,0 +1,43 @@
+{
+    "id": 11,
+    "title": "Flauti ripieni",
+    "subtitle": "senza uova e senza lattosio",
+    "category": "Dolci",
+    "difficulty": "Media",
+    "baseServings": 8,
+    "time": 270,
+    "prepTime": 255,
+    "cookTime": 15,
+    "ingredients": [
+        { "name": "Latte di soia", "qty": 100, "unit": "ml" },
+        { "name": "Lievito di birra fresco", "qty": 12, "unit": "gr" },
+        { "name": "Zucchero", "qty": 120, "unit": "gr" },
+        { "name": "Farina manitoba", "qty": 250, "unit": "gr" },
+        { "name": "Farina 0", "qty": 250, "unit": "gr" },
+        { "name": "Acqua", "qty": 120, "unit": "ml" },
+        { "name": "Olio di semi di girasole", "qty": 60, "unit": "ml" },
+        { "name": "Sale", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Prima dell'impasto, preparare un lievitino con latte di soia, un cucchiaino di zucchero e lievito fresco. Mescolare bene in una ciotola e lasciar fermentare per 20 min.",
+        "In una ciotola unire le due farine e lo zucchero.",
+        "Aggiungere il lievitino e mescolare.",
+        "Aggiungere l'acqua un po' per volta, continuando ad impastare, poi un pizzico di sale e l'olio a filo.",
+        "Lasciar lievitare l'impasto per 2 ore, o fino al raddoppio.",
+        "Stendere l'impasto di uno spessore di circa 0.5 - 1 cm, formando un rettangolo. Dividere poi in parti, creare della incisioni su metà rettangolo e farcire la restante metà a piacere; arrotolare su se stesso.",
+        "Lasciar lievitare i flauti su una teglia per altre 2 ore.",
+        "Spennellare con latte di soia e infornare a 160° per 15 min."
+    ],
+    "notes":[
+        "Si può sostituire il latte di soia con una qualsiasi bevanda vegetale (ad esmepio: avena, riso, ecc.) o con latte senza lattosio.",
+        "",
+        "Far lievitare l'impasto in forno con luce accesa e coperto con un canovaccio."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": [
+        "Le brioches cotte si conservano in freezer fino a 2 mesi.",
+        "Procedere congelandole su un vassoio per 2 ore e poi spostarle in un sacchetto gelo, oppure avvolgerle direttamente con pellicola e congelarle.",
+        "Per scongelarle, si possono lasciare in frigorifero, oppure si possono scaldare direttamenre in forno o microonde."
+    ]
+}

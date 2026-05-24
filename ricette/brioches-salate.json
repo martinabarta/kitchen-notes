@@ -1,0 +1,36 @@
+{
+    "id": 18,
+    "title": "Brioches salate",
+    "subtitle": "",
+    "category": "Antipasti",
+    "difficulty": "Media",
+    "baseServings": 15,
+    "time": 180,
+    "prepTime": 155,
+    "cookTime": 25,
+    "ingredients": [
+        { "name": "Farina manitoba 0", "qty": 250, "unit": "gr" },
+        { "name": "Farina 00", "qty": 250, "unit": "gr" },
+        { "name": "Latte", "qty": 250, "unit": "ml" },
+        { "name": "Uova", "qty": 2, "unit": "" },
+        { "name": "Lievito di birra fresco", "qty": 15, "unit": "gr" },
+        { "name": "Burro", "qty": 80, "unit": "gr" },
+        { "name": "Sale", "qty": 10, "unit": "gr" },
+        { "name": "Zucchero semolato", "qty": 5, "unit": "gr" }
+    ],
+    "instructions": [
+        "In una ciotola unire le due farine, il lievito di birra fresco sbriciolato e il latte a temperatura ambiente. Impastare fino ad ottenere un primo composto grossolano.",
+        "Aggiungere l’uovo e continuare ad impastare fino al completo assorbimento.",
+        "Spostare l’impasto su un piano da lavoro, allargarlo ed aggiungere poco per volta il burro morbido. Continuare ad impastare fino ad ottenere un panetto compatto ed omogeneo.",
+        "Far lievitare per 2 ore a temperatura ambiente coperto da una ciotola.",
+        "Stendere l’impasto formando un rettangolo spesso circa 3 mm e dividerlo in triangoli. Arrotolare su se stessi i triangoli per formare le brioches, tirando leggermente la pasta.",
+        "Posizionare le brioches ben distanziate su una teglia con carta forno e far lievitare per 30 min.",
+        "Spennellare con l’uovo la superficie e cuocere in forno statico a 180 °C per 25 min."
+    ],
+    "notes":[
+        "Se durante la formazione dell’impasto, questo dovesse risultare troppo asciutto, aggiungere altro latte; viceversa, unire poca farina al composto."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

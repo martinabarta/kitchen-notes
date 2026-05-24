@@ -1,0 +1,41 @@
+{
+    "id": 16,
+    "title": "Protein cookies",
+    "subtitle": "con proteine Prozis gusto speculoos e cioccolato",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 12,
+    "time": 25,
+    "prepTime": 15,
+    "cookTime": 10,
+    "ingredients": [
+        { "name": "Farina 00", "qty": 100, "unit": "gr" },
+        { "name": "Proteine vegan di Prozis gusto speculoos", "qty": 50, "unit": "gr" },
+        { "name": "Burro", "qty": 120, "unit": "gr" },
+        { "name": "Zucchero di canna", "qty": 70, "unit": "gr" },
+        { "name": "Zucchero semolato", "qty": 40, "unit": "gr" },
+        { "name": "Uovo", "qty": 1, "unit": "" },
+        { "name": "Tuorlo", "qty": 1, "unit": "" },
+        { "name": "Estratto di vaniglia", "qty": 1, "unit": "cucchiaino" },
+        { "name": "Cnnella in polvere", "qty": 0.5, "unit": "cucchiaino" },
+        { "name": "Bicarbonato", "qty": 0.5, "unit": "cucchiaino" },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" },
+        { "name": "Gocce di cioccolato fondente", "qty": 100, "unit": "gr" }
+    ],
+    "instructions": [
+        "Preriscaldare il forno a 180 °C (statico) e preparare una teglia con carta da forno.",
+        "In una ciotola montare il burro morbido e gli zuccheri finché diventano chiari e cremosi.",
+        "Aggiungere l’uovo e la vaniglia, amalgamare bene.",
+        "In un’altra ciotola, mescolare la farina, le proteine, il bicarbonato, la cannella e il sale.",
+        "Unire gradualmente il mix secco al composto di burro e uova. Se l’impasto sembra troppo compatto, aggiungere un cucchiaio di latte.",
+        "Incorporare le gocce di cioccolato con una spatola.",
+        "Formare delle palline da 25 gr circa, disporle distanziate sulla teglia e schiacciarle leggermente.",
+        "Cuocere per 9 - 11 min: devono essere dorati ai bordi e morbidi al centro. Lasciarli raffreddare sulla teglia 5 min prima di spostarli."
+    ],
+    "notes":[
+        "Sciogliere del cioccolato extra e intingere la base dei biscotti. Farli raffreddare su carta forno in frigo per 10 - 15 min."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

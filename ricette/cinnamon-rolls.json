@@ -1,0 +1,36 @@
+{
+    "id": 20,
+    "title": "Cinnamon rolls",
+    "subtitle": "",
+    "category": "Dolci",
+    "difficulty": "Media",
+    "baseServings": 12,
+    "time": 95,
+    "prepTime": 65,
+    "cookTime": 30,
+    "ingredients": [
+        { "name": "Farina manitoba 0", "qty": 600, "unit": "gr" },
+        { "name": "Latte", "qty": 300, "unit": "ml" },
+        { "name": "Lievito di birra secco", "qty": 8, "unit": "gr" },
+        { "name": "Burro", "qty": 220, "unit": "gr" },
+        { "name": "Zucchero a velo", "qty": 80, "unit": "gr" },
+        { "name": "Zucchero di canna", "qty": 125, "unit": "gr" },
+        { "name": "Zucchero di canna intergale", "qty": 100, "unit": "gr" },
+        { "name": "Sale", "qty": 1, "unit": "cucchiaino" },
+        { "name": "Estratto di vaniglia", "qty": "", "unit": "q.b." },
+        { "name": "Miele", "qty": 50, "unit": "gr" },
+        { "name": "Cannella", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Far sciogliere il lievito nel latte tiepido e lasciare riposare per 5 - 10 min.",
+        "In una ciotola mettere la farina, creando una fontanella, e aggiungere gli ingredienti: latte e lievito, zucchero a velo, 25 gr di zucchero di canna, sale, 110 gr di burro fuso e vaniglia. Impastare con le mani fino ad ottenere un impasto che non si appiccichi ma che non sia comunque troppo secco. Coprire con pellicola e lasciare lievitare per 1 ora - 1 ora e 30 min.",
+        "Per la farcitura unire 110 gr di burro morbido (ma non fuso), 100 gr zucchero di canna e 100 gr di zucchero di canna integrale, miele, cannella e mescolare fino ad ottenere un composto morbido.",
+        "Una volta che l’impasto sarà lievitato, stenderlo su un piano da lavoro leggermente infarinato e formare un rettangolo spesso circa 0.5 cm. Spalmare la farcitura, arrotolare il tutto e, con dello spago da cucina, tagliare l’impasto a rondelle spesse circa 2 - 3 cm.",
+        "Posizionarle su una teglia o pirofila e lasciare lievitare, coperte con pellicola, per 20 - 25 min.",
+        "Una volta terminata la lievitazione, spennellare con del latte e infornare in forno preriscaldato a 170 °C per 25 - 30 min."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

@@ -1,0 +1,40 @@
+{
+    "id": 5,
+    "title": "Sformato di erbette e formaggio",
+    "subtitle": "",
+    "category": "Antipasti",
+    "difficulty": "Facile",
+    "baseServings": 4,
+    "time": 45,
+    "prepTime": 10,
+    "cookTime": 35,
+    "ingredients": [
+        { "name": "Erbette miste", "qty": 400, "unit": "gr" },
+        { "name": "Cipolla", "qty": 1, "unit": "" },
+        { "name": "Uova", "qty": 3, "unit": "" },
+        { "name": "Farina 0", "qty": 150, "unit": "gr" },
+        { "name": "Latte", "qty": 120, "unit": "ml" },
+        { "name": "Formaggio a pasta filante", "qty": 200, "unit": "gr" },
+        { "name": "Parmigiano", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." },
+        { "name": "Olio evo", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Rosolare la cipolla tritata con un filo d'olio",
+        "Aggiungere le erbette, cuocere finchè non diventano morbide, aggiungere sale e pepe.",
+        "In una ciotola, mescolare le uova con il latte e la farina.",
+        "Unire le erbette e il formaggio tagliato a cubetti.",
+        "Versare in una teglia ben oliata, agiungere il parmigiano in superficie e cuocere a 180° per 35 min."
+    ],
+    "notes": [
+        "Si può utilizzare qualunque formaggio a pasta filante (ad esempio: mozzarella per pizza, scamorza, provola, edamer, ecc.).",
+        "",
+        "Si possono utilzare le erbette miste fresche o surgelate, oppure gli spianci, freschi o surgelati."
+    ],
+    "variants": [],
+    "storageFrigo": [
+        "Tagliato a fette, in un contenitore ermetico, lo sformato si conserva in frigorifero per massimo 2 giorni."
+    ],
+    "storageFreezer": []
+}

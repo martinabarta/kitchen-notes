@@ -1,0 +1,32 @@
+{
+    "id": 30,
+    "title": "Torta di cachi",
+    "subtitle": "con gocce di cioccolato",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 1,
+    "time": 45,
+    "prepTime": 5,
+    "cookTime": 40,
+    "ingredients": [
+        { "name": "Cachi", "qty": 350, "unit": "gr" },
+        { "name": "Uova", "qty": 3, "unit": "" },
+        { "name": "Zucchero", "qty": 100, "unit": "gr" },
+        { "name": "Olio di semi di girasole", "qty": 100, "unit": "gr" },
+        { "name": "Farina 00", "qty": 200, "unit": "gr" },
+        { "name": "Lievito per dolci", "qty": 1, "unit": "bustina" },
+        { "name": "Gocce di cioccolato", "qty": 100, "unit": "gr" },
+        { "name": "Estratto di vaniglia", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" }
+    ],
+    "instructions": [
+        "Ricavare 350 gr di polpa di cachi ben maturi e frullarla.",
+        "In una ciotola, unire la farina, il lievito per dolci setacciato e un pizzico di sale. Mescolare bene ed unire lo zucchero e le uova.",
+        "Con una frusta mescolare leggermente ed unire la polpa di cachi, l’olio e l’aroma alla vaniglia. Continuare a mescolare fino ad ottenere un composto liscio e senza grumi. Infine, unire le gocce di cioccolato.",
+        "Spennellare lo stampo con olio di semi, versare l’impasto e cuocere in forno statico a 180 °C per circa 40 min."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

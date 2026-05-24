@@ -1,0 +1,37 @@
+{
+    "id": 7,
+    "title": "Torta soffice",
+    "subtitle": "al cacao con prugne e gocce di cioccolato",
+    "category": "Dolci",
+    "difficulty": "Faile",
+    "baseServings": 1,
+    "time": 60,
+    "prepTime": 15,
+    "cookTime": 45,
+    "ingredients": [
+        { "name": "Farina 00", "qty": 200, "unit": "gr" },
+        { "name": "Cacao amaro", "qty": 40, "unit": "gr" },
+        { "name": "Zucchero di canna", "qty": 160, "unit": "gr" },
+        { "name": "Prugne fresche", "qty": 400, "unit": "gr" },
+        { "name": "Uova", "qty": 3, "unit": "" },
+        { "name": "Lievito per dolci", "qty": 1, "unit": "bustina" },
+        { "name": "Burro", "qty": 100, "unit": "gr" },
+        { "name": "Latte", "qty": 120, "unit": "ml" },
+        { "name": "Gocce di cioccolato", "qty": 80, "unit": "gr" },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" }
+    ],
+    "instructions": [
+        "Sciogliere il burro e lasciarlo intiepidire.",
+        "Mescolare le uova con lo zucchero e montare per 2 min finchè non diventano chiare.",
+        "Aggiungere il burro fuso, il latte e mescolare.",
+        "Unire poco per volta, setacciando, la farina, il cacao, il lievito e il sale.",
+        "Infarinare leggermente le prugne e le gocce di cioccolato ed unirle al composto delicatamente.",
+        "Versare l'impasto in uno stampo di diametro 22 cm, rivestito da carta forno o leggermente imburrato e infarinato, e cuocere in forno a 180° per 40 - 45 min."
+    ],
+    "notes":[
+        "Le prugne si possono inserire nell'impasto, tagliate a cubetti, oppure si possono utilizzare per metà nell'impasto e per metà come decorazione (tagliandole a fettine e disponendole sulla superficie prima di informare la torta)."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

@@ -1,0 +1,61 @@
+{
+    "id": 29,
+    "title": "Salatini",
+    "subtitle": "",
+    "category": "Antipasti",
+    "difficulty": "Facile",
+    "baseServings": "",
+    "time": 30,
+    "prepTime": 15,
+    "cookTime": 15,
+    "ingredients": [
+        { "name": "Uova", "qty": 2, "unit": "" },
+        { "name": "Farina 00", "qty": 450, "unit": "gr" },
+        { "name": "Latte", "qty": 120, "unit": "ml" },
+        { "name": "Olio evo", "qty": 70, "unit": "ml" },
+        { "name": "Parmigiano grattugiato", "qty": 60, "unit": "gr" },
+        { "name": "Lievito istantaneo per salati", "qty": 8, "unit": "gr" },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." },
+        { "name": "Spezie", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "In una ciotola mescolare tutti gli ingredienti liquidi e le spezie.",
+        "Aggiungere tutti gli ingredienti secchi e, nel caso in cui si opti per delle varianti, il condimento ed impastare fino ad ottenere un impasto omogeneo e compatto.",
+        "Stendere con un mattarello su un piano leggermente infarinato e formare i salatini.",
+        "Cuocere in forno statico a 180 °C per 10 - 15 min."
+    ],
+    "notes":[],
+    "variants": [
+        {
+        "name": "Salatini con formaggio",
+        "ingredients": [
+            "70 - 100 gr di formaggio a pasta dura (ad esempio: emmental, scamorza, provola, ecc.)"
+        ],
+        "description": "Aggiungere il formaggio tagliato a cubetti all'impasto."
+        },
+        {
+        "name": "Salatini con salumi",
+        "ingredients": [
+            "70 - 100 gr di salumi (ad esempio: prosciutto cotto, speck, pancetta, ecc.)"
+        ],
+        "description": "Aggiungere i salumi tagliati a cubetti all'impasto."
+        },
+        {
+        "name": "Salatini con sottaceti",
+        "ingredients": [
+            "70 - 100 gr di sottaceti (ad esempio: olive, pomodorini secchi, funghi, ecc.)"
+        ],
+        "description": "ATTENZIONE: potrebbe variare la consistenza dell'impasto e potrebbe esser necessario aggiungere della farina."
+        },
+        {
+        "name": "Salatini con verdura",
+        "ingredients": [
+            "70 - 100 gr di verdura (ad esempio: peperoni, zucchine, melanzane, ecc.)"
+        ],
+        "description": "Tagliare a cubetti la verdura e cuocerla in precedenza in modo che non risulti cruda; unire all'impasto una volta raffreddata."
+        }
+    ],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

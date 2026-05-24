@@ -1,0 +1,37 @@
+{
+    "id": 1,
+    "title": "Canederli",
+    "subtitle": "",
+    "category": "Primi piatti",
+    "difficulty": "Media",
+    "baseServings": 10,
+    "time": 40,
+    "prepTime": 25,
+    "cookTime": 15,
+    "ingredients": [
+        { "name": "Pane raffermo", "qty": 250, "unit": "gr" },
+        { "name": "Speck", "qty": 150, "unit": "gr" },
+        { "name": "Cipolle bianche", "qty": 50, "unit": "gr" },
+        { "name": "Uova", "qty": 2, "unit": "" },
+        { "name": "Latte", "qty": 250, "unit": "gr" },
+        { "name": "Burro", "qty": 10, "unit": "gr" },
+        { "name": "Pepe", "qty": "", "unit": "q.b." },
+        { "name": "Prezzemolo", "qty": "", "unit": "q.b." },
+        { "name": "Erba cipollina", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Tritare finemente la cipolla e tagliare a pezzi molto piccoli lo speck, circa 2 - 3 mm.",
+        "In una padella far sciogliere il burro a fuoco dolce, versare la cipolla e lo speck. Far rosolare per 5 min mescolando spesso. Poi spegnere il fuoco e tenere da parte.",
+        "Tritare l'erba cipollina e il ciuffo di prezzemolo, quindi tagliare il pane raffermo a dadini di circa 0,5 cm.",
+        "Versare in una ciotola il pane e aggiungere il latte: inizialmente 200 gr e, in caso dovesse risultare troppo asciutto, il restante successivamente. Unire anche le uova, l'erba cipollina e il prezzemolo tritati.",
+        "Proseguire unendo lo speck e la cipolla ormai intiepiditi e iniziare a mescolare per amalgamare il tutto.",
+        "Una volta pronto, inumidire leggermente le mani con acqua fredda e formare i canederli: dovranno avere un diametro di circa 5 cm.",
+        "Si possono cuocere nel borodo di carne bollente, per circa 15 minm oppure pre-cuocerli nel brodo e successivamente passarli in padella con una noce di burro."
+    ],
+    "notes": [
+        "Se durante la formazione dell'impasto, questo dovesse risultare troppo asciutto, aggiungere altro latte; viceversa, unire poca farina al composto."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

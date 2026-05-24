@@ -1,0 +1,55 @@
+{
+    "id": 6,
+    "title": "Burger di carote e formaggio",
+    "subtitle": "",
+    "category": "Secondi piatti",
+    "difficulty": "Facile",
+    "baseServings": 4,
+    "time": 30,
+    "prepTime": 15,
+    "cookTime": 15,
+    "ingredients": [
+        { "name": "Carote grattugiate", "qty": 300, "unit": "gr" },
+        { "name": "Farina", "qty": 50, "unit": "gr" },
+        { "name": "Uovo", "qty": 1, "unit": "" },
+        { "name": "Formaggio a pasta filante", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Pepe", "qty": "", "unit": "q.b." },
+        { "name": "Paprika dolce", "qty": 0.5, "unit": "cucchiaino" },
+        { "name": "Curry", "qty": 0.5, "unit": "cucchiaino" },
+        { "name": "Porro in polvere", "qty": 0.5, "unit": "cucchiaino" },
+        { "name": "Pangrattato", "qty": "", "unit": "q.b." },
+        { "name": "Farina per panatura", "qty": "", "unit": "q.b." },
+        { "name": "Uovo per panatura", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Grattugiare le carote finemente e strizzarle per rimuovere l'acqua.",
+        "In una ciotola, unire la carote, le spezie, la farina e l'uovo; amalgamare bene fino ad ottenere un composto compatto e non troppo umido.",
+        "Lasciar riposare il composto per 15 - 20 min.",
+        "Formare i burger, mettendo al centro il formaggio, passarli leggermente nella farina, poi nell'uovo ed infine nel pangrattato.",
+        "Cuocere in forno a 190° - 200°, per circa 15 min, fino a quando non saranno ben dorati."
+    ],
+    "notes":[
+        "Si può utilizzare qualunque formaggio a pasta filante (ad esempio: mozzarella per pizza, scamorza, provola, gorgonzola, edamer, ecc.)",
+        "",
+        "Per una panatura ancora più croccante, passare i burger una seconda volta nell'uovo e nel pangrattato.",
+        "",
+        "Prima di infornarli, mettere un filo d'olio su entrambe le superfici.",
+        "",
+        "Si può utilizzare la stessa ricetta per formare delle polpette."
+    ],
+    "variants": [],
+    "storageFrigo": [
+        "I burger crudi, meglio se già formati ma non ancora panati, si possono conservare in frigorifero, su un piatto rivestito da carta forno, coperti con pellicola, per massimo 24 ore.",
+        "",
+        "I burger cotti, invece, si possono conservare in frigorifero in un contenitore ermetico per 2 - 3 giorni.",
+        "Per scaldarli, metterli in forno per 8 - 10 min a 180°"
+    ],
+    "storageFreezer": [
+        "Disporre i burger su un vassoio, ben distanziati e congelarli per 2 ore; trasferirli successivamente in un sacchetto gelo.",
+        "",
+        "Se congelati crudi, si conservano per circa 2 mesi e si possono cuocere direttamente, senza scongelarli, aggiungendo 5 - 7 min di cottura.",
+        "",
+        "Se concelati cotti, si conservano per 1 - 2 mesi e si possono cuocere in forno ventilato. (Metodo sconsigliato, perchè perderanno croccantezza)"
+    ]
+}

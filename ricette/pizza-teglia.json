@@ -1,0 +1,36 @@
+{
+    "id": 27,
+    "title": "Pizza in teglia",
+    "subtitle": "",
+    "category": "Secondi piatti",
+    "difficulty": "Media",
+    "baseServings": 2,
+    "time": 360,
+    "prepTime": 335,
+    "cookTime": 25,
+    "ingredients": [
+        { "name": "Farina manitoba 0", "qty": 500, "unit": "gr" },
+        { "name": "Acqua", "qty": 400, "unit": "gr" },
+        { "name": "Lievito di birra fresco", "qty": 8, "unit": "gr" },
+        { "name": "Sale", "qty": 10, "unit": "gr" },
+        { "name": "Olio evo", "qty": 25, "unit": "gr" },
+        { "name": "Zucchero", "qty": 1, "unit": "cucchiaino" }
+    ],
+    "instructions": [
+        "In una ciotola unire acqua, zucchero e lievito. Far sciogliere bene ed unire la farina.",
+        "Dare una prima mescolata, grossolanamente, e aggiungere sale e olio. Mescolare fino a quando la farina non sarà completamente assorbita.",
+        "Coprire con un canovaccio per 30 min.",
+        "Con le mani unte di olio fare le pieghe in ciotola: prendere i bordi e portarli verso il centro. Ripetere per 3 volte con 30 min di pausa, coperto con un canovaccio, tra una piega e l’altra.",
+        "Dopo l’ultima piega, coprire e far lievitare per 3 ore.",
+        "Stendere su una teglia unta con dell’olio e far riposare per 45 min.",
+        "Condire a piacere e cuocere in forno statico a 250° per 10 - 12 min sulla base del forno e successivamente a 220° per 10 min nella parte più alta."
+    ],
+    "notes":[
+        "Se risulta difficile stendere l’impasto, dare una prima forma in teglia e, dopo i 45 minuti di riposo, provare a stenderla nuovamente.",
+        "",
+        "CONSIGLIO: cuocere prima la base, condita eventualmente con pomodoro e successivamente aggiungere la mozzarella e il resto della farcitura."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

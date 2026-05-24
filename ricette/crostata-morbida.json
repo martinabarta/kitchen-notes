@@ -1,0 +1,33 @@
+{
+    "id": 10,
+    "title": "Crostata morbida",
+    "subtitle": "base",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 1,
+    "time": 45,
+    "prepTime": 23,
+    "cookTime": 22,
+    "ingredients": [
+        { "name": "Uova", "qty": 2, "unit": "" },
+        { "name": "Zucchero", "qty": 110, "unit": "gr" },
+        { "name": "Olio di semi", "qty": 60, "unit": "gr" },
+        { "name": "Latte", "qty": 60, "unit": "gr" },
+        { "name": "Farina 00", "qty": 150, "unit": "gr" },
+        { "name": "Lievito per dolci", "qty": 8, "unit": "gr" }
+    ],
+    "instructions": [
+        "In una ciotola con le fruste elettriche montare lo zucchero e le uova per almeno 10 min a velocità massima fino ad ottenere un composto chiaro e spumoso.",
+        "Versare il latte e l'olio di semi e mescolare, sempre con le fruste.",
+        "Setacciare la farina e il lievito per dolci e continuare ad amalgamare con le fruste elettriche a velocità bassa fino ad ottenere un composto omogeneo.",
+        "Ungere con burro, o olio, uno stampo furbo per crostata morbida, di diametro 26 - 28 cm, e far aderire un disco di carta forno sulla parte centrale del fondo.",
+        "Versare l'impasto nello stampo e cuocere in forno statico preriscaldato a 175° per 22 min nel ripiano più basso. Fare la prova cottura con lo stuzzicadenti, se è cotta, sfornare.",
+        "Lasciare raffreddare e sformare dallo stampo quando è ancora leggermente tiepida."
+    ],
+    "notes":[
+        "Se viene utilizzato il burro per lo stampo, infarinare i bordi."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

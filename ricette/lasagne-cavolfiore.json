@@ -1,0 +1,57 @@
+{
+    "id": 4,
+    "title": "Lasagne al cavolfiore",
+    "subtitle": "con ragù bianco, salsiccia e scamorza affumicata",
+    "category": "Primi piatti",
+    "difficulty": "Facile",
+    "baseServings": 4,
+    "time": 130,
+    "prepTime": 90,
+    "cookTime": 40,
+    "ingredients": [
+        { "name": "Sfoglia per lasagne", "qty": "", "unit": "q.b." },
+        { "name": "Cavolfiore pulito", "qty": 500, "unit": "gr" },
+        { "name": "Latte", "qty": 250, "unit": "ml" },
+        { "name": "Burro", "qty": 30, "unit": "gr" },
+        { "name": "Farina", "qty": 30, "unit": "gr" },
+        { "name": "Sale", "qty": "", "unit": "q.b." },
+        { "name": "Olio evo", "qty": "", "unit": "q.b." },
+        { "name": "Noce moscata", "qty": "", "unit": "q.b." },
+        { "name": "Mozzarella per pizza", "qty": "", "unit": "q.b." },
+        { "name": "Scamorza affumicata", "qty": "", "unit": "q.b." },
+        { "name": "Carne macinata mista", "qty": 250, "unit": "gr" },
+        { "name": "Salsiccia", "qty": 120, "unit": "gr" },
+        { "name": "Pancetta dolce", "qty": 70, "unit": "gr" },
+        { "name": "Soffritto", "qty": 60, "unit": "gr" },
+        { "name": "Vino bianco", "qty": 120, "unit": "ml" },
+        { "name": "Brodo di carne", "qty": 200, "unit": "ml" }
+    ],
+    "instructions": [
+        "In una pentola, soffriggere il sedano, la carota e la cipolla in 2 cucchiai d'olio per circa 5 min.",
+        "Aggiungere la pancetta e lasciar rosolare a fuoco medio-basso fino a doratura.",
+        "Unire il macinato e la salsiaccia sgranata; rosolare bene fino a quando non sarà leggermente dorato.",
+        "Sfumare con vino bianco e lasciarlo evaporare completamente.",
+        "Aggiungere il brodo, coprire con un coperchio e lasciar cuocere per 25 - 30 min finchè non avrà raggiunto una consistenza morbida ma non lòiquida.",
+        "Per la besciamella, tagliare il cavolfiore in cimette e lessarlo in acqua salata per circa 10 - 12 min.",
+        "In un pentolino, sciogliere il burro e unire la farina: cuocere 1 - 2 min.",
+        "Aggiungere il latte poco alla volta, mescolando con una frusta, e portare alla giusta densità.",
+        "Frullare il cavolfiore, la besciamella, il sale (circa 4 gr) e un pizzico di noce moscata.",
+        "Lasciar cuocere la besciamella a fuoco basso per 1 - 2 min.",
+        "Formare la lasagna, alternando sfoglia, besciamella, ragù, scamorza e mozzarella. Come ultimo strato, stendere abbondante besciamella e mozzarella.",
+        "Cuocre in forno, coperta, a 180° per 35 - 40 min e gli ultimi 5 min scoperta per una bella gratinatura."
+    ],
+    "notes": [],
+    "variants": [],
+    "storageFrigo": [
+        "Le lasagne, già assemblate, si possono conservare in frigorifero crude, coperte con coperchio o pellicola, per 24 - 36 ore.",
+        "",
+        "Le lasagne cotte, invece, si possono conservare in frigorifero, ben coperte o in un contenitore ermeticom oer 2 - 3 giorni.",
+        "Per riscaldarle, metterle in una teglia, coperte con alluminio, in forno a 160° - 170° per 15 - 20 min."
+    ],
+    "storageFreezer": [
+        "Le lasagne, sia crude che cotte, si conservano in freezer per 2 - 3 mesi.",
+        "",
+        "Se congelate crude, cuocerle in forno come consueto a 170° - 180° per 50 - 60 min.",
+        "Se congelate cotte, scongelarle in frigorifero e successivamente cuocerle in forno a 160° - 170° per 20 - 25 min."
+    ]
+}

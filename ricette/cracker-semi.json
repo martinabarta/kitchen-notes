@@ -1,0 +1,28 @@
+{
+    "id": 23,
+    "title": "Cracker ai semi",
+    "subtitle": "",
+    "category": "Antipasti",
+    "difficulty": "Facile",
+    "baseServings": "",
+    "time": 20,
+    "prepTime": 5,
+    "cookTime": 15,
+    "ingredients": [
+        { "name": "Farina integrale", "qty": 200, "unit": "gr" },
+        { "name": "Semi misti", "qty": 50, "unit": "gr" },
+        { "name": "Acqua", "qty": 100, "unit": "gr" },
+        { "name": "Olio evo", "qty": 30, "unit": "gr" },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" }
+    ],
+    "instructions": [
+        "Frullare la farina integrale e i semi misti.",
+        "Aggiungere l’acqua, l’olio e un pizzico di sale e continuare a frullare fino a quando non si forma una palla di impasto. Su un piano infarinato, amalgamare e stendere il composto fino a ricavare uno spessore di circa 0,2 cm.",
+        "Cospargere con un filo d’olio, una manciata di semi misti e del sale grosso. Passare il mattarello per incorporare gli ingredienti alla superficie e tagliare a triangolini.",
+        "Infornare a 200 °C in forno ventilato per 15 - 20 min."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

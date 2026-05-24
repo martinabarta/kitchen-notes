@@ -1,0 +1,130 @@
+{
+    "id": 14,
+    "title": "Pasta frolla",
+    "subtitle": "senza lievito",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": "",
+    "time": 330,
+    "prepTime": 300,
+    "cookTime": "",
+    "ingredients": [
+        { "name": "Farina 00", "qty": 200, "unit": "gr" },
+        { "name": "Farina 0", "qty": 100, "unit": "gr" },
+        { "name": "Burro", "qty": 150, "unit": "gr" },
+        { "name": "Zucchero a velo", "qty": 100, "unit": "gr" },
+        { "name": "Uovo", "qty": 1, "unit": "" },
+        { "name": "Estratto di vaniglia", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Unire tutti gli ingredienti facendo attenzione a due semplici regole: il burro deve essere freddo di frigorifero e l'uovo deve essere a temperatura ambiente.",
+        "Una volta assemblati tutti gli ingredienti avvolgere l’impasto in una pellicola trasparente e lasciar riposare in frigorifero per 4 - 5 ore.",
+        "Stendere la frolla con uno spessore di 0,5 cm per i biscotti e le crostate, ma se si vogliono fare dei biscotti ripieni con creme spalmabili, stendere ad uno spessore di 0,3 cm."
+    ],
+    "notes":[
+        "Se si formano dei biscotti, cuocere a 180° in forno statico, o 160° in forno ventilato, per 15 min.",
+        "Se si forma una crostata, cuocere a 180° in forno statico, o 160° in forno ventilato, per 25 - 30 min.",
+        "",
+        "Usare il burro di centrifuga è un elemento fondamentale per la buona riuscita della frolla (esempio: Lurpak)",
+        "",
+        "Usare un mix di farine tipo 0 e tipo 00: l’aggiunta della farina di tipo 0 rende la frolla più elastica e sarà più semplice maneggiarla e spostarla (esempio: farina Caputo Manitoba e farina Caputo Pasticceria)",
+        "",
+        "Impastare solo una dose di frolla alla volta: se serve una doppia dose, non sommare gli ingredienti ma impastare solo una dose e formare due panetti divisi.",
+        "",
+        "Lasciare la frolla a temperatura ambiente per 10 minuti: dopo il raffreddamento in frigorifero per 4 - 5 ore, lasciare la frolla a temperatura ambiente prima di stenderla con il mattarello.",
+        "",
+        "Usare gli spessori e il mattarello antiaderente: con gli spessori l’impasto avrà sempre la stessa altezza e cuocerà in maniera uniforme. Il mattarello è sempre freddo e non scalda la frolla, è antiaderente quindi non serve eccedere con la farina e si lava facilmente.",
+        "",
+        "Cuocere la pasta frolla in tortiere o teglie microforate: in questo modo la cottura sarà uniforme e il fondo ben cotto e non umido.",
+        "",
+        "Raffreddare in frigorifero: prima di cuocere biscotti, crostata o tartellette, raffredda nuovamente la frolla per 30 minuti direttamente sulla tortiera o teglia che verrà usata per la cottura."
+    ],
+    "variants": [
+         {
+        "name": "Pasta frolla al CACAO",
+        "ingredients": [
+            "25 gr di cacao amaro in polvere"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Pasta frolla al THE MATCHA",
+        "ingredients": [
+            "15 gr di polvere al the matcha"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Pasta frolla al COCCO",
+        "ingredients": [
+            "100 gr di zucchero integrale al cocco IN SOSTITUZIONE allo zucchero a velo",
+            "250 gr di farina (attenzione alle proporzioni tra farina di tipo 0 e 00)",
+            "50 gr di farina di cocco"
+        ],
+        "description": "Per la pasta frolla al cocco si può: sostituire lo zucchero a velo con lo zucchero intergale al cocco, oppure mantenere le proporzioni di farine aggiungendo quella di cocco."
+        },
+        {
+        "name": "Pasta frolla al MIELE",
+        "ingredients": [
+            "80 gr di miele",
+            "120 gr di burro",
+            "20 gr di zucchero a velo"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Pasta frolla al CAFFÈ",
+        "ingredients": [
+            "10 gr di caffè solubile in polvere"
+        ],
+        "description": "Far sciogliere il caffè nell'uovo."
+        },
+        {
+        "name": "Pasta frolla al LIMONE",
+        "ingredients": [
+            "Scorza di limone q.b."
+        ],
+        "description": "Grattugiare la scorza di limone nell'uovo."
+        },
+        {
+        "name": "Pasta frolla al GINSENG",
+        "ingredients": [
+            "7 gr di ginseng solubile"
+        ],
+        "description": "Far sciogliere il ginseng nell'uovo."
+        },
+        {
+        "name": "Pasta frolla al LIQUIRIZIA",
+        "ingredients": [
+            "10 gr di liquirizia in polvere"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Pasta frolla al PISTACCHIO",
+        "ingredients": [
+            "250 gr di farina (attenzione alle proporzioni tra farina di tipo 0 e 00)",
+            "50 gr di farina di pistacchi"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Pasta frolla alle MANDORLE",
+        "ingredients": [
+            "250 gr di farina (attenzione alle proporzioni tra farina di tipo 0 e 00)",
+            "50 gr di farina di mandorle"
+        ],
+        "description": ""
+        },
+        {
+        "name": "Pasta frolla alle NOCCIOLE",
+        "ingredients": [
+            "250 gr di farina (attenzione alle proporzioni tra farina di tipo 0 e 00)",
+            "50 gr di farina di nocciole"
+        ],
+        "description": ""
+        }
+    ],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

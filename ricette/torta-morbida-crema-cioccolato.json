@@ -1,0 +1,43 @@
+{
+    "id": 32,
+    "title": "Torta soffice",
+    "subtitle": "con crema al cioccolato e profumo di arancia",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": 1,
+    "time": 45,
+    "prepTime": 15,
+    "cookTime": 30,
+    "ingredients": [
+        { "name": "Uova", "qty": 2, "unit": "" },
+        { "name": "Latte", "qty": 100, "unit": "ml" },
+        { "name": "Panna fresca", "qty": 130, "unit": "ml" },
+        { "name": "Olio di semi di girasole", "qty": 80, "unit": "gr" },
+        { "name": "Farina 00", "qty": 200, "unit": "gr" },
+        { "name": "Zucchero", "qty": 100, "unit": "gr" },
+        { "name": "Cioccolato fondente", "qty": 200, "unit": "gr" },
+        { "name": "Burro", "qty": 20, "unit": "gr" },
+        { "name": "Lievito per dolci", "qty": 8, "unit": "gr" },
+        { "name": "Aroma all'arancia", "qty": 0.5, "unit": "fialetta" },
+        { "name": "Estratto di vaniglia", "qty": "", "unit": "q.b." },
+        { "name": "Zucchero a velo", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Tritare finemente il cioccolato fondente.",
+        "Scaldare la panna fresca in un pentolino fino a sfiorare il bollore. Quando calda, versare la panna sul cioccolato tritato, aggiungere il burro e mescolare energicamente finchè non si otterrà una crema liscia e lucida. Lasciare intiepidire.",
+        "In una ciotola, montare le uova con lo zucchero finchè non diventano chiare. Unire l'olio di semi, il latte, l'aroma di arancia e un cucchiaino di estratto di vaniglia.",
+        "Setacciare all'interno la farina con il lievito e mescolare fino ad avere un composto omogeneo e senza grumi.",
+        "Imburrare e infarinare una teglia con diametro di 24 cm.",
+        "Versare poco più della metà dell'impasto e infornare in forno statico, preriscaldato, a 180° per 10 min.",
+        "Estrarre la teglia, distribuire uniformemente la crema al cioccolato sulla base parzialmente cotta (lasciare 1 cm dai bordi). Coprire con il resto dell'impasto, livellando delicatamente.",
+        "Rimettere in forno per altri 15 - 20 min fino a doratura."
+    ],
+    "notes":[
+        "Non sformare la torta finchè non è completamente fredda, poichè la base soffice è molto delicata appena sfornata.",
+        "",
+        "Spolverare con zucchero a velo solo una volta fredda."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}
