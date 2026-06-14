@@ -23,6 +23,19 @@ window.addEventListener('DOMContentLoaded', async () => {
         generaCheckboxFrigo();
         filtraRicette();
 
+        // --- CONTROLLO LINK DI CONDIVISIONE ALL'AVVIO ---
+        const urlParams = new URLSearchParams(window.location.search);
+        const nomeRicettaDaAprire = urlParams.get('ricetta');
+
+        if (nomeRicettaDaAprire) {
+            // Cerca la ricetta corrispondente nel database appena caricato
+            const ricettaTrovata = tutteLeRicette.find(r => r.title.toLowerCase() === nomeRicettaDaAprire.toLowerCase());
+            if (ricettaTrovata) {
+                apriRicetta(ricettaTrovata.id);
+            }
+        }
+        // ------------------------------------------------
+
         // --- FIX AVVIO FRECCIA FILTRI SMARTPHONE ---
         // Verifichiamo se l'utente è su mobile all'apertura del sito
         const isMobile = window.innerWidth <= 768;
@@ -407,11 +420,23 @@ function renderizzaIngredientiEProporzioni() {
 }
 
 function condividiRicetta() {
+    if (!activeRecipe) return;
+
+    // Crea un URL base pulito senza vecchi parametri di ricerca
+    const urlBase = window.location.origin + window.location.pathname;
+    
+    // Aggiunge il parametro con il titolo della ricetta codificato correttamente
+    const urlCondivisione = `${urlBase}?ricetta=${encodeURIComponent(activeRecipe.title)}`;
+
     if (navigator.share) {
-        navigator.share({ title: activeRecipe.title, text: `Guarda la mia ricetta per: ${activeRecipe.title}`, url: window.location.href });
+        navigator.share({ 
+            title: activeRecipe.title, 
+            text: `Guarda la mia ricetta per: ${activeRecipe.title}`, 
+            url: urlCondivisione 
+        }).catch(err => console.log("Errore nella condivisione:", err));
     } else {
-        navigator.clipboard.writeText(window.location.href);
-        alert("Link copiato!");
+        navigator.clipboard.writeText(urlCondivisione);
+        alert("Link della ricetta copiato negli appunti!");
     }
 }
 
