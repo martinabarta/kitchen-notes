@@ -30,5 +30,7 @@
     { "id":29, "title": "Salatini", "file": "ricette/salatini.json"},
     { "id":30, "title": "Torta di cachi e cioccolato", "file": "ricette/torta-cachi-cioccolato.json"},
     { "id":31, "title": "Torta di cachi e frutta secca", "file": "ricette/torta-cachi-frutta-secca.json"},
-    { "id":32, "title": "Torta morbida con crema al cioccolato", "file": "ricette/torta-morbida-crema-cioccolato.json"}    
+    { "id":32, "title": "Torta morbida con crema al cioccolato", "file": "ricette/torta-morbida-crema-cioccolato.json"},
+    { "id":33, "title": "Crema pasticcera classica", "file": "ricette/crema-pasticcera-classica.json"},
+    { "id":34, "title": "Crema pasticcera al cioccolato", "file": "ricette/crema-pasticcera-cioccolato.json"}
 ]
