@@ -1,0 +1,29 @@
+{
+    "id": 34,
+    "title": "Crema pasticcera",
+    "subtitle": "al cioccolato",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": "2",
+    "time": 10,
+    "prepTime": 10,
+    "cookTime": "",
+    "ingredients": [
+        { "name": "Latte intero", "qty": 250, "unit": "ml" },
+        { "name": "Tuorli", "qty":2, "unit": "" },
+        { "name": "Zucchero", "qty": 65, "unit": "gr" },
+        { "name": "Amido di mais", "qty": 20, "unit": "gr" },
+        { "name": "Cacao amaro in polvere", "qty": 15, "unit": "gr" }
+    ],
+    "instructions": [
+        "Scaldare il latte in un pentolino a fuoco medio, portando quasi a ebollizione.",
+        "In una ciotola, sbattere i tuorli con lo zucchero, il cacao e l'amido di mais fino a ottenere un composto chiaro e liscio.",
+        "Aggiungere lentamente il liquido caldo al composto, mescolando costantemente per evitare la formazione di grumi.",
+        "Rimettere il composto nel pentolino e cuocere a fuoco medio, mescolando continuamente, finché la crema si addensa e raggiunge la consistenza desiderata.",
+        "Togliere dal fuoco e lasciare raffreddare prima di utilizzare o conservare in frigorifero."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}

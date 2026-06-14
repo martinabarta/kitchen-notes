@@ -1,0 +1,30 @@
+{
+    "id": 33,
+    "title": "Crema pasticcera",
+    "subtitle": "classica",
+    "category": "Dolci",
+    "difficulty": "Facile",
+    "baseServings": "",
+    "time": 10,
+    "prepTime": 10,
+    "cookTime": "",
+    "ingredients": [
+        { "name": "Latte intero", "qty": 400, "unit": "ml" },
+        { "name": "Panna fresca", "qty": 100, "unit": "ml" },
+        { "name": "Tuorli", "qty": 4, "unit": "" },
+        { "name": "Zucchero", "qty": 120, "unit": "gr" },
+        { "name": "Amido di mais", "qty": 40, "unit": "gr" },
+        { "name": "Estratto di vaniglia", "qty": 1, "unit": "cucchiaino" }
+    ],
+    "instructions": [
+        "Scaldare il latte con la panna e l'estratto di vaniglia in un pentolino a fuoco medio, portando quasi a ebollizione.",
+        "In una ciotola, sbattere i tuorli con lo zucchero e l'amido di mais fino a ottenere un composto chiaro e liscio.",
+        "Aggiungere lentamente il liquido caldo al composto, mescolando costantemente per evitare la formazione di grumi.",
+        "Rimettere il composto nel pentolino e cuocere a fuoco medio, mescolando continuamente, finché la crema si addensa e raggiunge la consistenza desiderata.",
+        "Togliere dal fuoco e lasciare raffreddare prima di utilizzare o conservare in frigorifero."
+    ],
+    "notes":[],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": []
+}
