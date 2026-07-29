@@ -10,7 +10,7 @@
     "cookTime": "",
     "ingredients": [
         { "name": "Zucchine", "qty": 2, "unit": "" },
-        { "name": "Madorle", "qty": 50, "unit": "gr" },
+        { "name": "Mandorle", "qty": 50, "unit": "gr" },
         { "name": "Parmigiano grattugiato", "qty": 50, "unit": "gr" },
         { "name": "Aglio", "qty": 1, "unit": "spicchio" },
         { "name": "Olio evo", "qty": 50, "unit": "ml" },
