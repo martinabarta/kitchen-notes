@@ -45,7 +45,7 @@ Il file deve seguire questa struttura:
 - id: Deve essere numerico e univoco
 - category: Inserire una delle categorie previste dai filtri (Antipasti, Primi piatti, Secondi piatti, ecc.)
 - time, prepTime e cookTime: Devono esser specificati in minuti (1 ora = 60, 1 ora e mezza = 90, ecc.)
-- notes, vatiants, storage*: Se una ricetta non ha queste caratteristiche, si può lasciare l'array vuoto [] oppure omettere le proprietà (il sistema nasconderà automaticamente i relativi blocchi visivi)
+- notes, variants, storage*: Se una ricetta non ha queste caratteristiche, si può lasciare l'array vuoto [] oppure omettere le proprietà (il sistema nasconderà automaticamente i relativi blocchi visivi)
 
 
  
