@@ -32,5 +32,11 @@
     { "id":31, "title": "Torta di cachi e frutta secca", "file": "ricette/torta-cachi-frutta-secca.json"},
     { "id":32, "title": "Torta morbida con crema al cioccolato", "file": "ricette/torta-morbida-crema-cioccolato.json"},
     { "id":33, "title": "Crema pasticcera classica", "file": "ricette/crema-pasticcera-classica.json"},
-    { "id":34, "title": "Crema pasticcera al cioccolato", "file": "ricette/crema-pasticcera-cioccolato.json"}
+    { "id":34, "title": "Crema pasticcera al cioccolato", "file": "ricette/crema-pasticcera-cioccolato.json"},
+    { "id":35, "title": "Pan bauletto alla barbabietola", "file": "ricette/pane-barbabietola-noci.json"},
+    { "id":36, "title": "Brioches alla barbabietola", "file": "ricette/brioches-barbabietola.json"},
+    { "id":37, "title": "Burger di zucchine e ceci", "file": "ricette/burger-zucchine-ceci.json"},
+    { "id":38, "title": "Polpette di melanzane", "file": "ricette/polpette-melanzane-mediterranea.json"},
+    { "id":39, "title": "Pesto alla genovese", "file": "ricette/pesto-genovese.json"},
+    { "id":40, "title": "Muffin salati con zucchine e speck", "file": "ricette/muffin-zucchine-speck.json"}
 ]

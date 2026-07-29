@@ -1,0 +1,48 @@
+{
+    "id": 36,
+    "title": "Brioches alla barbabietola",
+    "subtitle": "con marmellata ai frutti di bosco",
+    "category": "Dolci",
+    "difficulty": "Media",
+    "baseServings": 15,
+    "time": 225,
+    "prepTime": 30,
+    "cookTime": 15,
+    "ingredients": [
+        { "name": "Purea di barbabietola", "qty": 200, "unit": "gr" },
+        { "name": "Farina manitoba 0", "qty": 300, "unit": "gr" },
+        { "name": "Farina 00", "qty": 200, "unit": "gr" },
+        { "name": "Lievito di birrra secco", "qty": 4, "unit": "gr" },
+        { "name": "Latte", "qty": 100, "unit": "ml" },
+        { "name": "Zucchero", "qty": 80, "unit": "gr" },
+        { "name": "Burro", "qty": 60, "unit": "gr" },
+        { "name": "Uova", "qty": 2, "unit": "" },
+        { "name": "Estratto di vaniglia", "qty": "", "unit": "q.b." },
+        { "name": "Sale", "qty": 1, "unit": "pizzico" },
+        { "name": "Marmellata di frutti di bosco", "qty": "", "unit": "q.b." }
+    ],
+    "instructions": [
+        "Sciogliere il lievito nel latte tiepido insieme ad un cucchiaino di zucchero preso dal totale.",
+        "In una ciotola, mescolare le due farine e lo zucchero rimanente; aggiungere il latte con il lievito, 1 uovo, la purea di barbabietola e l'estratto di vaniglia.",
+        "Impastare finchè non inizia ad incordarsi.",
+        "Inserire il burro morbido un pezzetto alla volta, facendo assorbire bene prima di aggiungere il successivo. Infine aggiungere il sale.",
+        "Formare una palla, metterla in una ciotola leggermente oliata, coprire con pellicola e un panno e lasciar lievitare a temperatura ambiente per circa 2 ore.",
+        "Riprendere l'impasto e formare le brioches.",
+        "Disporle su una teglia rivestita da carta forno, ben distanziate; coprirle con un panno e far lievitare per 60 min.",
+        "Spennellare delicatamente la superficie con un tuorlo sbattuto insieme a due cucchiai di latte.",
+        "Infornare in forno statico a 180° per 12 - 15 min."
+    ],
+    "notes":[
+        "Si possono sostituire i 4 gr di lievito di birra secco con 12 gr di lievito di birra fresco.",
+        "",
+        "Le brioches possono avere la forma classica: stendere l'impasto a forma di rettangolo e ricavare dei triangoli da farcire e richiudere su se stessi.",
+        "Oppure, possono avere la forma di fagottini o flauti: dividere l'impasto in panetti da 60 - 70 gr l'uno, stenderli formando un rettangolo, farcirli e richiuderli su se stessi."
+    ],
+    "variants": [],
+    "storageFrigo": [],
+    "storageFreezer": [
+        "Le brioches cotte si conservano in freezer per circa 2 mesi.",
+        "",
+        "Al momento di consumarle, tirarle fuori dal freezer la sera prima e lasciar scongelare a temperatura ambiente, oppure scaldarle direttamenre da congelate in forno ventilato a 160° per 5 - 7 min (o qualche secondo nel microonde)."
+    ]
+}
