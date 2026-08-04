@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Kitchen Notes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon\favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon\favicon.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 </head>
 <body>
 
@@ -185,15 +189,18 @@
         ▲
     </button>
 
-    <script src="script.js">
+    <script src="script.js"></script>
+    <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-              navigator.serviceWorker.register('./sw.js')
-                .then((reg) => console.log('Service Worker registrato con successo!', reg))
-                .catch((err) => console.log('Errore registrazione Service Worker:', err));
+                navigator.serviceWorker.register('./sw.js')
+                    .then((reg) => console.log('Service Worker registrato con successo!', reg))
+                    .catch((err) => console.log('Errore registrazione Service Worker:', err));
             });
-          }
+        }
     </script>
+</body>
+</html>
     
 </body>
 </html>
