@@ -9,7 +9,7 @@ let preferiti = JSON.parse(localStorage.getItem('ricette_preferite')) || []; // 
 // DOMContentLoaded assicura che l'HTML sia pronto prima di eseguire le chiamate Fetch
 window.addEventListener('DOMContentLoaded', async () => {
     try {
-         // Carica il file indice posizionato nella cartella radice del progetto (lista-ricette.json)
+        // Carica il file indice posizionato nella cartella radice del progetto (lista-ricette.json)
         const responseIndice = await fetch('lista-ricette.json');
         const indiceRicette = await responseIndice.json();
         
@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         );
         tutteLeRicette = await Promise.all(caricamenti);
         
-         // Genera la lista dei checkbox univoci nell'HTML e avvia il primo rendering dei dati
+        // Genera la lista dei checkbox univoci nell'HTML e avvia il primo rendering dei dati
         generaCheckboxFrigo();
         filtraRicette();
 
@@ -34,28 +34,28 @@ window.addEventListener('DOMContentLoaded', async () => {
                 apriRicetta(ricettaTrovata.id);
             }
         }
-        // ------------------------------------------------
 
-        // --- FIX AVVIO FRECCIA FILTRI SMARTPHONE ---
-        // Verifichiamo se l'utente è su mobile all'apertura del sito
+        // --- IMPOSTAZIONE SIDEBAR CHIUSA DI DEFAULT ALL'AVVIO ---
         const isMobile = window.innerWidth <= 768;
         const arrow = document.getElementById('toggle-arrow');
         const sidebar = document.getElementById('sidebar-filters');
         
         if (arrow && sidebar) {
-            if (isMobile) {
-                sidebar.classList.add('collapsed'); // Forza la chiusura della barra su mobile per non coprire i piatti
-                arrow.innerText = "▼ FILTRI";
-            } else {
-                sidebar.classList.remove('collapsed'); // Mantiene la barra aperta su schermi PC grandi
-                arrow.innerText = "◀";
-            }
+            sidebar.classList.add('collapsed'); // Chiuso all'avvio (scheda "Tutte")
+            arrow.innerText = isMobile ? "▼ FILTRI" : "▶";
         }
-        // -------------------------------------------
 
     } catch (error) {
         console.error("Errore nel caricamento del database ricette:", error);
     }
+
+    // --- GESTIONE TASTO INDIETRO DEL BROWSER / MOBILE ---
+    window.addEventListener('popstate', (event) => {
+        const detailView = document.getElementById('recipe-detail-view');
+        if (detailView && !detailView.classList.contains('hidden')) {
+            chiudiRicettaDettaglioUI();
+        }
+    });
 });
 
 // --- GESTIONE INTERFACCIA SIDEBAR (COLLAPSE/EXPAND) ---
@@ -64,7 +64,6 @@ function toggleSidebar() {
     const arrow = document.getElementById('toggle-arrow');
     sidebar.classList.toggle('collapsed');
     
-    // Controlla se l'utente è su smartphone o PC per decidere la direzione della freccia
     const isMobile = window.innerWidth <= 768;
     
     if (sidebar.classList.contains('collapsed')) {
@@ -78,27 +77,32 @@ function toggleSidebar() {
 function switchTab(tabName) {
     currentTab = tabName;
 
-     // Aggiorna lo stato grafico dei pulsanti della navbar superiore
+    // Aggiorna lo stato grafico dei pulsanti della navbar superiore
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     document.getElementById(`tab-${tabName}`).classList.add('active');
     
     const frigoFilters = document.getElementById('frigo-ingredients-group');
     const frigoSummaryBox = document.getElementById('frigo-summary-box');
-
-    document.getElementById('sidebar-filters').classList.remove('collapsed');
-    
+    const sidebar = document.getElementById('sidebar-filters');
+    const arrow = document.getElementById('toggle-arrow');
     const isMobile = window.innerWidth <= 768;
-    document.getElementById('toggle-arrow').innerText = isMobile ? "▲ NASCONDI FILTRI" : "◀";
 
-    if(tabName === 'frigo') {
-        // Mostriamo il gruppo frigo in AGGIUNTA ai filtri standard, che rimangono visibili
+    if (tabName === 'frigo') {
+        // Mostriamo la sezione frigo e APRIAMO la sidebar dei filtri
         frigoFilters.classList.remove('hidden');
         frigoSummaryBox.classList.remove('hidden');
+        
+        sidebar.classList.remove('collapsed'); // Filtri VISIBILI su Svuota Frigo
+        arrow.innerText = isMobile ? "▲ NASCONDI FILTRI" : "◀";
     } else {
-        // Nascondiamo il frigo se siamo in altre schede
+        // Nascondiamo la sezione frigo e CHIUDIAMO la sidebar dei filtri
         frigoFilters.classList.add('hidden');
         frigoSummaryBox.classList.add('hidden');
+        
+        sidebar.classList.add('collapsed'); // Filtri NASCOSTI nelle altre schede
+        arrow.innerText = isMobile ? "▼ FILTRI" : "▶";
     }
+    
     filtraRicette();
 }
 
@@ -120,7 +124,7 @@ function generaCheckboxFrigo() {
     const container = document.getElementById('frigo-checkboxes');
     const tuttiIngredienti = [];
     tutteLeRicette.forEach(r => r.ingredients.forEach(i => {
-        if(!tuttiIngredienti.includes(i.name)) tuttiIngredienti.push(i.name);
+        if (!tuttiIngredienti.includes(i.name)) tuttiIngredienti.push(i.name);
     }));
     tuttiIngredienti.sort();
 
@@ -141,7 +145,7 @@ function aggiornaSvuotaFrigo() {
     const checkboxSelezionati = Array.from(document.querySelectorAll('#frigo-checkboxes input:checked')).map(cb => cb.value);
     const summaryContainer = document.getElementById('frigo-summary-tags');
     
-    if(checkboxSelezionati.length === 0) {
+    if (checkboxSelezionati.length === 0) {
         summaryContainer.innerHTML = '<span class="placeholder-text">Nessun ingrediente selezionato</span>';
     } else {
         summaryContainer.innerHTML = checkboxSelezionati.map(ingr => `<span class="tag">${ingr}</span>`).join('');
@@ -159,22 +163,17 @@ function filtraRicette() {
                                      .map(cb => cb.value.toLowerCase().trim());
 
     const risultati = tutteLeRicette.filter(ricetta => {
-        // 1. FILTRO DELLA BARRA DI RICERCA (Sempre attivo)
         const corrispondeQuery = ricetta.title.toLowerCase().includes(query) || 
                                  ricetta.ingredients.some(i => i.name.toLowerCase().includes(query));
         if (!corrispondeQuery) return false;
 
-        // 2. FILTRO TAB PREFERITI (Esclude i filtri standard se attivo)
         if (currentTab === 'preferiti') {
             return preferiti.includes(ricetta.id);
         }
         
-        // 3. FILTRO INGREDIENTI FRIGO (Attivo solo se siamo nella tab frigo)
         if (currentTab === 'frigo') {
-            // Se l'utente è nella tab frigo ma non ha ancora selezionato caselle, non mostriamo nulla
             if (checkboxSelezionati.length === 0) return false;
             
-            // Verifica se la ricetta contiene almeno uno degli ingredienti del frigo
             const contieneIngredienteFrigo = checkboxSelezionati.some(ingrSelezionato => {
                 return ricetta.ingredients.some(ingrRicetta => {
                     const nomeRicetta = ingrRicetta.name.toLowerCase().trim();
@@ -182,11 +181,9 @@ function filtraRicette() {
                 });
             });
 
-            // Se la ricetta non ha gli ingredienti del frigo cercati, la scartiamo subito
             if (!contieneIngredienteFrigo) return false;
         }
 
-        // 4. FILTRI STANDARD (Ora attivi SIA su "Archivio" SIA su "Svuota-Frigo")
         const corrispondeCat = catFiltro === "" || ricetta.category === catFiltro;
         const corrispondeDiff = diffFiltro === "" || ricetta.difficulty === diffFiltro;
 
@@ -195,7 +192,6 @@ function filtraRicette() {
         else if (timeRange === 'medio') corrispondeTempo = ricetta.time > 15 && ricetta.time <= 45;
         else if (timeRange === 'lungo') corrispondeTempo = ricetta.time > 45;
 
-        // La ricetta deve superare TUTTI i controlli dei menu a discesa
         return corrispondeCat && corrispondeDiff && corrispondeTempo;
     });
 
@@ -204,14 +200,14 @@ function filtraRicette() {
 
 function renderizzaGruppiCategoria(lista) {
     const container = document.getElementById('results-area');
-    if(lista.length === 0) {
-        container.innerHTML = "<p style='text-align:center; font-family:var(--font-serif); padding:40px; color:#8d99ae;'>Nessuna ricetta trouvata.</p>";
+    if (lista.length === 0) {
+        container.innerHTML = "<p style='text-align:center; font-family:var(--font-serif); padding:40px; color:#8d99ae;'>Nessuna ricetta trovata.</p>";
         return;
     }
 
     const mappeCategorie = {};
     lista.forEach(ricetta => {
-        if(!mappeCategorie[ricetta.category]) mappeCategorie[ricetta.category] = [];
+        if (!mappeCategorie[ricetta.category]) mappeCategorie[ricetta.category] = [];
         mappeCategorie[ricetta.category].push(ricetta);
     });
 
@@ -256,7 +252,7 @@ function togglePreferito(event, id) {
 }
 
 function togglePreferitoAttuale() {
-    if(!activeRecipe) return;
+    if (!activeRecipe) return;
     togglePreferito({ stopPropagation: () => {} }, activeRecipe.id);
     document.getElementById('btn-fav-detail').innerText = preferiti.includes(activeRecipe.id) ? "❤️ Preferito" : "🤍 Aggiungi ai Preferiti";
 }
@@ -265,19 +261,21 @@ function apriRicetta(id) {
     activeRecipe = tutteLeRicette.find(r => r.id === id);
     if (!activeRecipe) return;
     
+    // --- GESTIONE CRONOLOGIA BROWSER ---
+    const urlBase = window.location.origin + window.location.pathname;
+    const urlRicetta = `${urlBase}?ricetta=${encodeURIComponent(activeRecipe.title)}`;
+    history.pushState({ recipeId: id }, '', urlRicetta);
+
     currentPortions = activeRecipe.baseServings || 4;
     
-    // Calcoliamo il tempo totale sommando preparazione e cottura in modo dinamico
     const minutiPrep = parseInt(activeRecipe.prepTime) || 0;
     const minutiCook = parseInt(activeRecipe.cookTime) || 0;
     const tempoTotaleCalcolato = minutiPrep + minutiCook;
     
-    // Popolamento dei testi principali e metadati
     document.getElementById('det-title').innerText = activeRecipe.title;
     document.getElementById('det-subtitle').innerText = activeRecipe.subtitle || "";
     document.getElementById('det-category').innerText = activeRecipe.category;
     
-    // Qui assegniamo i tre tempi formattati correttamente
     document.getElementById('det-total-time').innerText = formattaTempo(tempoTotaleCalcolato);
     document.getElementById('det-prep-time').innerText = formattaTempo(activeRecipe.prepTime);
     document.getElementById('det-cook-time').innerText = formattaTempo(activeRecipe.cookTime);
@@ -348,18 +346,15 @@ function apriRicetta(id) {
         blkStorage.classList.add('hidden');
     }
 
-    // Gestione pulsante preferiti e porzioni
     document.getElementById('btn-fav-detail').innerText = preferiti.includes(activeRecipe.id) ? "❤️ Preferito" : "🤍 Aggiungi ai Preferiti";
     renderizzaIngredientiEProporzioni();
 
-    // Procedimento passo-passo
     document.getElementById('det-instructions-container').innerHTML = activeRecipe.instructions.map((passo) => `
         <div class="recipe-step-block">
             <div class="recipe-info-text">${passo}</div>
         </div>
     `).join('');
 
-    // Sostituzione schermate visualizzate
     document.getElementById('recipe-detail-view').classList.remove('hidden');
     document.getElementById('main-app-layout').classList.add('hidden');
     
@@ -367,14 +362,26 @@ function apriRicetta(id) {
 }
 
 function chiudiRicetta() {
+    if (history.state && history.state.recipeId) {
+        history.back();
+    } else {
+        chiudiRicettaDettaglioUI();
+    }
+}
+
+function chiudiRicettaDettaglioUI() {
     document.getElementById('recipe-detail-view').classList.add('hidden');
     document.getElementById('main-app-layout').classList.remove('hidden');
     activeRecipe = null;
+    
+    const urlBase = window.location.origin + window.location.pathname;
+    history.replaceState(null, '', urlBase);
+    
     filtraRicette();
 }
 
 function cambiaPorzioni(variazione) {
-    if(currentPortions + variazione < 1) return;
+    if (currentPortions + variazione < 1) return;
     currentPortions += variazione;
     renderizzaIngredientiEProporzioni();
 }
@@ -390,17 +397,14 @@ function renderizzaIngredientiEProporzioni() {
     for (let i = 0; i < activeRecipe.ingredients.length; i += 2) {
         htmlRigheTable += "<tr>";
         
-        // --- COLONNA SINISTRA ---
         const ingr1 = activeRecipe.ingredients[i];
         if (ingr1.qty === 0 || ingr1.unit.toLowerCase() === "q.b.") {
-            // Se è q.b. stampiamo una stringa editoriale pulita senza numeri
             htmlRigheTable += `<td><div class="ingredient-bullet">${ingr1.name} <em>(${ingr1.unit})</em></div></td>`;
         } else {
             const qty1 = Math.round(((ingr1.qty / baseServings) * currentPortions) * 10) / 10;
             htmlRigheTable += `<td><div class="ingredient-bullet"><strong>${qty1} ${ingr1.unit}</strong> ${ingr1.name}</div></td>`;
         }
         
-        // --- COLONNA DESTRA ---
         const ingr2 = activeRecipe.ingredients[i + 1];
         if (ingr2) {
             if (ingr2.qty === 0 || ingr2.unit.toLowerCase() === "q.b.") {
@@ -410,7 +414,7 @@ function renderizzaIngredientiEProporzioni() {
                 htmlRigheTable += `<td><div class="ingredient-bullet"><strong>${qty2} ${ingr2.unit}</strong> ${ingr2.name}</div></td>`;
             }
         } else {
-            htmlRigheTable += "<td></td>"; // Cella vuota protetta per il bilanciamento del layout
+            htmlRigheTable += "<td></td>";
         }
         
         htmlRigheTable += "</tr>";
@@ -422,10 +426,7 @@ function renderizzaIngredientiEProporzioni() {
 function condividiRicetta() {
     if (!activeRecipe) return;
 
-    // Crea un URL base pulito senza vecchi parametri di ricerca
     const urlBase = window.location.origin + window.location.pathname;
-    
-    // Aggiunge il parametro con il titolo della ricetta codificato correttamente
     const urlCondivisione = `${urlBase}?ricetta=${encodeURIComponent(activeRecipe.title)}`;
 
     if (navigator.share) {
@@ -460,18 +461,14 @@ function formattaTempo(minuti) {
     } else {
         const ore = Math.floor(numMinuti / 60);
         const restantiMinuti = numMinuti % 60;
-        
-        // Determina se usare "ora" o "ore" in base al numero
         const testoOra = (ore === 1) ? "ora" : "ore";
         
-        // Se ci sono minuti rimanenti aggiunge "e X min", altrimenti scrive solo il blocco delle ore
         return restantiMinuti > 0 
             ? `${ore} ${testoOra} e ${restantiMinuti} min` 
             : `${ore} ${testoOra}`;
     }
 }
 
-// Monitora lo scorrimento della pagina o del contenitore dettagli
 window.onscroll = function() {
     gestisciVisualizzazionePulsanteSu();
 };
@@ -480,10 +477,6 @@ function gestisciVisualizzazionePulsanteSu() {
     const btnTop = document.getElementById('btn-back-to-top');
     if (!btnTop) return;
 
-    // Calcola lo scroll attuale tenendo conto delle diverse risposte dei browser mobile
-    const scrollAttuale = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
-
-    // Se l'utente ha sceso la pagina di oltre 300 pixel, mostra il pulsante
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         btnTop.classList.remove('hidden');
     } else {
