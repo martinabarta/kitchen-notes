@@ -185,6 +185,15 @@
         ▲
     </button>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+              navigator.serviceWorker.register('./sw.js')
+                .then((reg) => console.log('Service Worker registrato con successo!', reg))
+                .catch((err) => console.log('Errore registrazione Service Worker:', err));
+            });
+          }
+    </script>
+    
 </body>
 </html>
